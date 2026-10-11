@@ -1,445 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>10X SEO Service - Premium Growth Systems</title>
-    
+    <title>10X SEO Services</title>
+    <link rel="shortcut icon" href="images/logo.webp" type="image/x-icon">
+
+    <link rel="stylesheet" href="style.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;700;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <style>
-        :root {
-            --black: #000000;
-            --white: #ffffff;
-            --accent: #08f703;
-            --gray-dark: #0f0f0f;
-            --gray-mid: #1a1a1a;
-            --font-main: 'Inter', sans-serif;
-            --font-heading: 'Space Grotesk', sans-serif;
-            --border-color: rgba(255, 255, 255, 0.08);
-        }
-
-        * { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font-main); }
-        html { scroll-behavior: smooth; }
-        body { background-color: var(--black); color: var(--white); overflow-x: hidden; line-height: 1.6; }
-        h1, h2, h3, h4 { font-family: var(--font-heading); font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; }
-        a { text-decoration: none; color: inherit; transition: all 0.3s ease; }
-        img { max-width: 100%; display: block; }
-        .container { max-width: 1300px; margin: 0 auto; padding: 0 5%; }
-
-        /* --- Buttons --- */
-        .btn {
-            display: inline-flex; align-items: center; justify-content: center; gap: 10px;
-            padding: 14px 28px; width: fit-content; height: fit-content;
-            border-radius: 8px; font-weight: 600; cursor: pointer;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            text-align: center; font-size: 0.9rem; letter-spacing: 0.5px;
-            border: 2px solid transparent; background: transparent;
-        }
-        .btn-primary { background-color: var(--accent); color: var(--black); border-color: var(--accent); }
-        .btn-primary:hover { background-color: transparent; color: var(--accent); transform: translateY(-2px); border-color: var(--accent); }
-        .btn-outline { background-color: transparent; color: var(--white); border-color: rgba(255,255,255,0.2); }
-        .btn-outline:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
-        .btn-black { background-color: var(--black); color: var(--white); border-color: var(--black); }
-        .btn-black:hover { background-color: transparent; color: var(--black); }
-
-        .section-dark { background-color: var(--black); color: var(--white); padding: 120px 0; }
-        .section-light { background-color: var(--white); color: var(--black); padding: 120px 0; }
-
-        /* --- Section Headers --- */
-        .section-label {
-            display: inline-flex; align-items: center; gap: 12px;
-            font-size: 0.8rem; font-weight: 600; text-transform: uppercase;
-            letter-spacing: 3px; color: var(--accent); margin-bottom: 20px;
-        }
-        .section-label::before {
-            content: ''; width: 30px; height: 2px; background-color: var(--accent); display: inline-block;
-        }
-        .section-heading {
-            font-size: clamp(2.5rem, 5vw, 4.5rem);
-            text-transform: uppercase; font-weight: 900; line-height: 1;
-            letter-spacing: -2px;
-        }
-
-        /* --- Scroll Reveal --- */
-        .reveal { opacity: 0; transform: translateY(50px); transition: all 0.9s cubic-bezier(0.5, 0, 0, 1); }
-        .reveal.active { opacity: 1; transform: translateY(0); }
-
-        /* --- Navigation --- */
-        .nav-wrapper {
-            position: absolute; top: 0; left: 0; width: 100%; z-index: 1000;
-            padding: 20px 0; pointer-events: none;
-        }
-        nav {
-            position: relative;
-            display: flex; justify-content: space-between; align-items: center;
-            width: 98%; max-width: 1200px; margin: 0 auto;
-            background-color: var(--white); color: var(--black);
-            padding: 10px 25px; border-radius: 10px;
-            border: 1px solid #eee; pointer-events: auto;
-        }
-        .logo-img { height: 40px; width: auto; object-fit: contain; }
-        .nav-links { display: flex; gap: 35px; font-size: 0.8rem; font-weight: 600; color: var(--black); text-transform: uppercase; letter-spacing: 1.5px; }
-        .nav-links a:hover { color: var(--accent); }
-
-        /* Hamburger (hidden on desktop) */
-        .hamburger {
-            display: none;
-            background: none; border: none; cursor: pointer;
-            font-size: 1.5rem; color: var(--black);
-        }
-
-        /* Mobile menu dropdown */
-        .mobile-menu {
-            display: none;
-            position: absolute;
-            top: 100%; left: 0; width: 100%;
-            background: var(--white);
-            padding: 20px 25px;
-            flex-direction: column; gap: 0;
-            border-radius: 0 0 10px 10px;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-            z-index: 999;
-        }
-        .mobile-menu a {
-            color: var(--black);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 0.9rem;
-            padding: 12px 0;
-            border-bottom: 1px solid #eee;
-            text-align: left;
-        }
-        .mobile-menu a:last-child { border-bottom: none; }
-        .mobile-menu.active { display: flex; }
-
-        /* --- HERO (with Floating Images) --- */
-        #hero {
-            position: relative; padding: 180px 0 120px;
-            background-color: var(--black); overflow: hidden;
-            text-align: center;
-        }
-        #hero::before {
-            content: ''; position: absolute; top: 0; left: 0; width: 100%; height: 100%;
-            background-image: 
-                linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-                linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
-            background-size: 60px 60px; z-index: 0; pointer-events: none;
-        }
-        #hero::after {
-            content: ''; position: absolute; top: -200px; right: -200px;
-            width: 700px; height: 700px;
-            background: radial-gradient(circle, rgba(8,247,3,0.18) 0%, transparent 65%);
-            z-index: 0; pointer-events: none;
-        }
-        .hero-inner { position: relative; z-index: 2; }
-
-        /* Floating Images inside Hero */
-        .hero-floating {
-            position: absolute; inset: 0; pointer-events: none; z-index: 1;
-        }
-        .hero-float {
-            position: absolute;
-            width: 140px;
-            height: 140px;
-            object-fit: cover;
-            border-radius: 16px;
-            opacity: 0.15;
-            border: 2px solid rgba(8, 247, 3, 0.4);
-            animation: floatHero 9s ease-in-out infinite;
-            filter: grayscale(100%) brightness(1.2);
-            pointer-events: none;
-        }
-        .hero-float-1 { top: 8%; left: 3%; animation-delay: 0s; }
-        .hero-float-2 { top: 55%; left: 5%; animation-delay: 2s; }
-        .hero-float-3 { top: 12%; right: 3%; animation-delay: 1s; }
-        .hero-float-4 { top: 60%; right: 5%; animation-delay: 3.5s; }
-
-        @keyframes floatHero {
-            0%, 100% { transform: translateY(0) rotate(-4deg) scale(1); }
-            50% { transform: translateY(-25px) rotate(4deg) scale(1.05); }
-        }
-
-        #hero h1 {
-            font-size: clamp(3rem, 7vw, 7rem);
-            font-weight: 900; text-transform: uppercase;
-            letter-spacing: -3px; line-height: 0.95;
-            margin-bottom: 30px;
-        }
-        #hero p.hero-sub {
-            color: #999; max-width: 720px; margin: 0 auto 50px auto;
-            font-size: 1.2rem; font-weight: 300; line-height: 1.7;
-        }
-        .hero-buttons { display: flex; justify-content: center; gap: 15px; flex-wrap: wrap; }
-
-        /* --- About --- */
-        #about { background-color: var(--white); color: var(--black); }
-        .about-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .about-text h2 { font-size: clamp(2.5rem, 4.5vw, 4rem); margin-bottom: 25px; text-transform: uppercase; font-weight: 900; letter-spacing: -1.5px; }
-        .about-text p { color: #555; margin-bottom: 25px; font-size: 1.1rem; font-weight: 400; line-height: 1.8; }
-        .about-features { list-style: none; margin: 30px 0 40px; }
-        .about-features li { display: flex; align-items: center; gap: 12px; margin-bottom: 14px; font-size: 1rem; font-weight: 500; }
-        .about-features li i { color: var(--accent); font-size: 1.1rem; }
-        .about-collage { position: relative; height: 580px; width: 100%; }
-        .collage-main { width: 82%; height: 82%; object-fit: cover; position: absolute; top: 0; left: 0; border-radius: 16px; transition: transform 0.6s ease; }
-        .about-collage:hover .collage-main { transform: scale(1.03); }
-        .collage-sub { width: 60%; height: 60%; object-fit: cover; position: absolute; bottom: 0; right: 0; border-radius: 16px; z-index: 2; border: 6px solid var(--white); transition: transform 0.6s ease; }
-        .about-collage:hover .collage-sub { transform: scale(1.03); }
-        .about-experience { position: absolute; top: 20px; right: 15px; background-color: var(--black); color: var(--white); padding: 20px 25px; border-radius: 12px; z-index: 3; text-align: center; }
-        .about-experience .num { font-family: var(--font-heading); font-size: 2.5rem; font-weight: 900; color: var(--accent); line-height: 1; }
-        .about-experience .lbl { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 2px; color: #aaa; margin-top: 5px; }
-
-        /* --- PROCESS --- */
-        #process { background-color: var(--black); color: var(--white); padding: 120px 0; }
-        #process .section-head { text-align: center; margin-bottom: 80px; }
-        #process h2 { color: var(--white); margin-bottom: 20px; }
-        #process p.sub { color: #888; max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
-        .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 0; border: 1px solid var(--border-color); border-radius: 16px; overflow: hidden; background-color: var(--border-color); }
-        .process-step { background-color: var(--black); padding: 45px 30px; position: relative; transition: all 0.4s ease; }
-        .process-step:hover { background-color: var(--gray-dark); }
-        .process-num { font-family: var(--font-heading); font-size: 3rem; font-weight: 900; line-height: 1; color: transparent; -webkit-text-stroke: 1.5px var(--accent); margin-bottom: 20px; }
-        .process-step h3 { font-size: 1.25rem; margin-bottom: 15px; text-transform: uppercase; color: var(--white); letter-spacing: 1px; }
-        .process-step p { color: #888; font-size: 0.95rem; line-height: 1.7; }
-
-        /* --- Portfolio --- */
-        #portfolio { background-color: var(--white); color: var(--black); padding: 140px 0; overflow: hidden; }
-        .portfolio-header { text-align: center; margin-bottom: 60px; }
-        .portfolio-title { font-size: clamp(4rem, 12vw, 11rem); font-weight: 900; text-transform: uppercase; line-height: 0.85; letter-spacing: -6px; color: var(--black); margin-bottom: 20px; }
-        .portfolio-slider .slide-item { padding: 0 15px; }
-        .portfolio-card { background-color: transparent; overflow: hidden; }
-        .portfolio-img { width: 100%; height: 600px; overflow: hidden; position: relative; border-radius: 16px; }
-        .portfolio-img img { width: 100%; height: 100%; object-fit: cover; transition: transform 1.2s cubic-bezier(0.4, 0, 0.2, 1); }
-        .portfolio-card:hover .portfolio-img img { transform: scale(1.06); }
-        .portfolio-info { padding: 30px 0 25px; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--black); }
-        .portfolio-info h3 { font-size: 2rem; text-transform: uppercase; letter-spacing: -1px; color: var(--black); }
-        .portfolio-tag { display: block; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px; color: #888; font-weight: 600; margin-bottom: 5px; }
-
-        /* --- CTA --- */
-        #cta { background-color: var(--white); color: var(--black); padding: 80px 0; }
-        .cta-card {
-            width: 95%; max-width: 1200px; margin: 0 auto;
-            background-color: var(--accent); color: var(--black);
-            padding: 80px 60px; border-radius: 24px;
-            text-align: center;
-            position: relative; overflow: hidden;
-        }
-        .cta-card::before {
-            content: ''; position: absolute; top: -50%; right: -10%;
-            width: 500px; height: 500px;
-            background: radial-gradient(circle, rgba(0,0,0,0.08) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-        .cta-card::after {
-            content: ''; position: absolute; bottom: -40%; left: -5%;
-            width: 400px; height: 400px;
-            background: radial-gradient(circle, rgba(0,0,0,0.06) 0%, transparent 70%);
-            border-radius: 50%;
-        }
-        .cta-inner { position: relative; z-index: 2; max-width: 800px; margin: 0 auto; }
-        .cta-badge {
-            display: inline-flex; align-items: center; gap: 8px;
-            background-color: rgba(0,0,0,0.1); padding: 8px 20px;
-            border-radius: 50px; font-size: 0.75rem; font-weight: 700;
-            text-transform: uppercase; letter-spacing: 2px;
-            margin-bottom: 25px; color: #111;
-        }
-        .cta-card h2 { font-size: clamp(2.2rem, 4vw, 3.2rem); margin-bottom: 20px; text-transform: uppercase; letter-spacing: -1px; line-height: 1.1; color: var(--black); }
-        .cta-card p { font-size: 1.2rem; margin-bottom: 40px; font-weight: 500; color: #111; line-height: 1.6; }
-        .cta-card .btn { padding: 18px 45px; font-size: 1rem; background-color: var(--black); color: var(--white); border-color: var(--black); white-space: nowrap; }
-        .cta-card .btn:hover { background-color: transparent; color: var(--black); border-color: var(--black); }
-
-        /* --- Core Systems --- */
-        #systems { background-color: var(--black); color: var(--white); padding: 140px 0; }
-        #systems .section-head { text-align: center; margin-bottom: 80px; }
-        #systems h2 { color: var(--white); margin-bottom: 20px; }
-        #systems p.sub { color: #888; max-width: 700px; margin: 0 auto; font-size: 1.1rem; }
-        .systems-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 25px; }
-        .system-card { background-color: var(--gray-dark); color: var(--white); padding: 45px 40px; border-radius: 20px; border: 1px solid var(--border-color); transition: all 0.4s ease; display: flex; align-items: flex-start; gap: 25px; }
-        .system-card:hover { border-color: var(--accent); transform: translateY(-5px); background-color: var(--gray-mid); }
-        .system-icon { width: 65px; height: 65px; border-radius: 14px; background-color: rgba(8,247,3,0.08); display: flex; align-items: center; justify-content: center; font-size: 1.7rem; color: var(--accent); flex-shrink: 0; transition: all 0.4s ease; }
-        .system-card:hover .system-icon { background-color: var(--accent); color: var(--black); }
-        .system-content h3 { font-size: 1.5rem; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; color: var(--white); }
-        .system-content p { color: #999; font-size: 1rem; line-height: 1.7; }
-
-        /* --- Why Choose Us --- */
-        #why { background-color: var(--white); color: var(--black); padding: 140px 0; }
-        .why-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .why-text h2 { font-size: clamp(2.5rem, 4.5vw, 4rem); margin-bottom: 25px; text-transform: uppercase; letter-spacing: -1.5px; font-weight: 900; }
-        .why-text > p { color: #555; font-size: 1.1rem; line-height: 1.8; margin-bottom: 40px; }
-        .why-list { list-style: none; }
-        .why-list li { display: flex; gap: 20px; padding: 25px 0; border-bottom: 1px solid #eee; }
-        .why-list li:last-child { border-bottom: none; }
-        .why-list .why-icon { width: 50px; height: 50px; border-radius: 10px; background-color: var(--black); color: var(--accent); display: flex; align-items: center; justify-content: center; font-size: 1.2rem; flex-shrink: 0; }
-        .why-list h4 { font-size: 1.15rem; margin-bottom: 6px; text-transform: uppercase; letter-spacing: 0.5px; }
-        .why-list p { color: #666; font-size: 0.95rem; line-height: 1.6; }
-        .why-image { width: 100%; height: 600px; border-radius: 20px; overflow: hidden; }
-        .why-image img { width: 100%; height: 100%; object-fit: cover; }
-
-        /* --- Platforms --- */
-        #platforms { background-color: var(--black); color: var(--white); padding: 140px 0; }
-        .platforms-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
-        .platforms-image-collage { position: relative; height: 550px; width: 100%; }
-        .platform-main { width: 80%; height: 80%; object-fit: cover; border-radius: 16px; position: absolute; top: 0; left: 0; transition: transform 0.6s ease; }
-        .platforms-image-collage:hover .platform-main { transform: scale(1.04); }
-        .platform-sub { width: 60%; height: 60%; object-fit: cover; border-radius: 16px; position: absolute; bottom: 0; right: 0; border: 6px solid var(--black); z-index: 2; transition: transform 0.6s ease; }
-        .platforms-image-collage:hover .platform-sub { transform: scale(1.04); }
-        .platforms-text h2 { font-size: clamp(2.5rem, 4.5vw, 4rem); margin-bottom: 25px; text-transform: uppercase; letter-spacing: -1.5px; color: var(--white); font-weight: 900; }
-        .platforms-text p { font-size: 1.1rem; margin-bottom: 25px; color: #999; line-height: 1.8; }
-        .platform-list { list-style: none; margin-bottom: 40px; }
-        .platform-list li { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; color: #ccc; font-size: 1rem; }
-        .platform-list li i { color: var(--accent); }
-
-        /* --- Results --- */
-        #results { background-color: var(--white); color: var(--black); padding: 140px 0; }
-        #results .section-head { text-align: center; margin-bottom: 80px; }
-        #results h2 { color: var(--black); }
-        .stats-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; }
-        .stat-item { text-align: center; padding: 50px 25px; border: 1px solid #eee; border-radius: 16px; transition: all 0.4s ease; }
-        .stat-item:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .stat-number { font-family: var(--font-heading); font-size: 5rem; font-weight: 900; color: var(--black); line-height: 1; margin-bottom: 15px; }
-        .stat-number span { color: var(--accent); }
-        .stat-label { font-size: 1.1rem; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: var(--black); margin-bottom: 12px; }
-        .stat-desc { color: #777; font-size: 0.95rem; }
-
-        /* --- Testimonials --- */
-        #testimonials { background-color: var(--black); padding: 140px 0; border-top: 1px solid var(--border-color); }
-        #testimonials .section-head { text-align: center; margin-bottom: 80px; }
-        #testimonials h2 { color: var(--white); }
-        #testimonials p.sub { color: #888; max-width: 600px; margin: 20px auto 0; font-size: 1.1rem; }
-        .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
-        .testimonial-card { background-color: var(--gray-dark); border-radius: 20px; padding: 45px 35px; border: 1px solid var(--border-color); transition: all 0.4s ease; position: relative; }
-        .testimonial-card:hover { border-color: var(--accent); transform: translateY(-5px); }
-        .testimonial-card .quote-mark { font-family: var(--font-heading); font-size: 5rem; color: var(--accent); opacity: 0.4; line-height: 0.5; margin-bottom: 25px; }
-        .testimonial-stars { color: var(--accent); font-size: 0.95rem; margin-bottom: 20px; letter-spacing: 2px; }
-        .testimonial-card > p { color: #ccc; font-size: 1.05rem; line-height: 1.75; margin-bottom: 30px; font-style: italic; }
-        .testimonial-author { display: flex; align-items: center; gap: 15px; border-top: 1px solid var(--border-color); padding-top: 25px; }
-        .testimonial-avatar { width: 55px; height: 55px; border-radius: 50%; overflow: hidden; border: 2px solid var(--accent); flex-shrink: 0; }
-        .testimonial-avatar img { width: 100%; height: 100%; object-fit: cover; }
-        .author-meta strong { display: block; font-size: 1rem; color: var(--white); text-transform: uppercase; letter-spacing: 1px; font-weight: 700; }
-        .author-meta span { font-size: 0.85rem; color: #777; }
-
-        /* --- Cross Marquee --- */
-        .cross-marquee-wrapper { position: relative; height: 420px; overflow: hidden; background: var(--white); display: flex; align-items: center; justify-content: center; border-top: 2px solid var(--black); border-bottom: 2px solid var(--black); }
-        .marquee-band { position: absolute; width: 250vw; left: -75vw; padding: 20px 0; font-family: var(--font-heading); font-size: 4rem; font-weight: 900; white-space: nowrap; text-transform: uppercase; display: flex; align-items: center; overflow: hidden; }
-        .band-black { background: var(--black); color: var(--white); transform: rotate(12deg); z-index: 2; border-top: 4px solid var(--accent); border-bottom: 4px solid var(--accent); }
-        .band-green { background: var(--accent); color: var(--black); transform: rotate(-12deg); z-index: 1; border-top: 4px solid var(--black); border-bottom: 4px solid var(--black); }
-        .marquee-track { display: flex; animation: scroll-left 25s linear infinite; }
-        .band-green .marquee-track { animation: scroll-right 25s linear infinite; }
-        .marquee-text { display: flex; align-items: center; padding-right: 60px; }
-        .marquee-text i { margin: 0 40px; font-size: 2.5rem; color: var(--accent); }
-        .band-green .marquee-text i { color: var(--black); }
-        @keyframes scroll-left { 0% { transform: translateX(0); } 100% { transform: translateX(-50%); } }
-        @keyframes scroll-right { 0% { transform: translateX(-50%); } 100% { transform: translateX(0); } }
-
-        /* --- Footer --- */
-        footer { background-color: var(--black); padding: 100px 0 40px 0; border-top: 1px solid var(--border-color); position: relative; overflow: hidden; }
-        .footer-grid { position: relative; z-index: 1; display: grid; grid-template-columns: 1fr 2fr 1fr; gap: 40px; align-items: start; margin-bottom: 80px; }
-        .footer-links { text-align: left; }
-        .footer-links h4 { font-size: 0.9rem; margin-bottom: 30px; color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; }
-        .footer-links ul { list-style: none; }
-        .footer-links ul li { margin-bottom: 18px; }
-        .footer-links ul li a { color: #999; font-size: 0.95rem; display: flex; align-items: center; gap: 12px; font-weight: 400; transition: all 0.3s; }
-        .footer-links ul li a:hover { color: var(--accent); transform: translateX(6px); }
-        .footer-contact li { display: flex; align-items: flex-start; gap: 15px; color: #999; font-size: 0.95rem; margin-bottom: 18px; text-align: left; }
-        .footer-contact li i { color: var(--accent); font-size: 1.05rem; margin-top: 4px; }
-        .footer-center { text-align: center; display: flex; flex-direction: column; align-items: center; justify-content: center; }
-        .footer-center .footer-logo { height: 80px; width: auto; margin-bottom: 22px; }
-        .footer-center p { color: #888; font-size: 1rem; font-weight: 300; max-width: 420px; margin: 0 auto 28px auto; line-height: 1.7; }
-        .footer-socials { display: flex; gap: 15px; justify-content: center; }
-        .footer-socials a { display: flex; align-items: center; justify-content: center; width: 42px; height: 42px; border-radius: 50%; background-color: #141414; color: var(--white); font-size: 1rem; transition: all 0.3s ease; }
-        .footer-socials a:hover { background-color: var(--accent); color: var(--black); transform: translateY(-4px); }
-        .footer-bottom { position: relative; z-index: 1; display: flex; justify-content: space-between; align-items: center; padding-top: 40px; border-top: 1px solid var(--border-color); color: #666; font-size: 0.9rem; }
-
-        /* --- Slick --- */
-        .slick-prev, .slick-next { display: none !important; }
-        .slick-dots { bottom: -50px; }
-        .slick-dots li button:before { font-size: 12px; color: #555; opacity: 0.5; }
-        .slick-dots li.slick-active button:before { color: var(--accent); opacity: 1; }
-        #portfolio .slick-dots li button:before { color: #999; }
-        #portfolio .slick-dots li.slick-active button:before { color: var(--accent); }
-
-        /* --- Responsive --- */
-        @media (max-width: 1024px) {
-            .about-grid, .platforms-grid, .why-grid { grid-template-columns: 1fr; }
-            .about-collage, .platforms-image-collage { height: 450px; }
-            .systems-grid, .testimonials-grid { grid-template-columns: 1fr; }
-            .process-grid { grid-template-columns: repeat(2, 1fr); }
-            .stats-grid { grid-template-columns: 1fr; }
-            .marquee-band { font-size: 2.5rem; padding: 15px 0; }
-            .band-black { transform: rotate(8deg); }
-            .band-green { transform: rotate(-8deg); }
-        }
-
-        @media (max-width: 768px) {
-            /* Navbar mobile: hamburger menu */
-            .nav-links { display: none; }
-            .hamburger { display: block; }
-            nav { padding: 10px 20px; }
-            .logo-img { height: 35px; }
-            nav .btn-primary { padding: 10px 16px; font-size: 0.75rem;display: none; }
-
-            /* Hide floating images on mobile */
-            .hero-floating { display: none; }
-
-            #hero h1 { font-size: 2.6rem; letter-spacing: -1px; }
-            #hero p.hero-sub { font-size: 1rem; }
-            .about-collage, .platforms-image-collage { height: 350px; }
-            .about-experience { top: 10px; right: 10px; padding: 15px 18px; }
-            .about-experience .num { font-size: 1.8rem; }
-            .cross-marquee-wrapper { height: 300px; }
-            .marquee-band { font-size: 1.8rem; padding: 12px 0; }
-            .band-black { transform: rotate(6deg); }
-            .band-green { transform: rotate(-6deg); }
-            .portfolio-info { flex-direction: column; gap: 15px; text-align: center; }
-            .portfolio-img { height: 400px; }
-            .system-card { flex-direction: column; text-align: left; }
-            .process-grid { grid-template-columns: 1fr; }
-            .footer-bottom { flex-direction: column; gap: 15px; text-align: center; }
-            .stats-grid { grid-template-columns: 1fr; }
-
-            /* CTA mobile */
-            .cta-card { padding: 50px 25px; }
-            .cta-card h2 { font-size: 1.8rem; }
-            .cta-card p { font-size: 1rem; }
-            .cta-card .btn { padding: 14px 30px; font-size: 0.9rem; }
-
-            /* Footer mobile: left align, reorder */
-            .footer-grid { 
-                display: flex; 
-                flex-direction: column; 
-                gap: 45px;
-                text-align: left;
-                align-items: flex-start;
-            }
-            .footer-center { 
-                order: 1; 
-                text-align: left;
-                align-items: flex-start;
-                width: 100%;
-            }
-            .footer-center p { margin: 0 0 22px 0; max-width: 100%; text-align: left; }
-            .footer-socials { justify-content: flex-start; }
-            .footer-links:first-child { order: 2; width: 100%; }
-            .footer-links:last-child { order: 3; width: 100%; }
-            .footer-links { text-align: left; width: 100%; }
-            .footer-links ul li a { justify-content: flex-start; }
-            .footer-contact li { justify-content: flex-start; text-align: left; }
-            .footer-center .footer-logo { height: 65px; }
-        }
-    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 </head>
+
 <body>
 
-    <!-- NAV -->
     <div class="nav-wrapper">
-        <nav>
-            <div class="logo"><img src="images/logo.webp" alt="10X SEO Service Logo" class="logo-img"></div>
+        <nav class="main-nav">
+
+            <div class="nav-logo">
+                <img src="images/logo.webp" alt="10X SEO Service Logo">
+            </div>
+
             <div class="nav-links">
                 <a href="#hero">Home</a>
                 <a href="#about">About</a>
@@ -448,524 +33,2001 @@
                 <a href="#testimonials">Clients</a>
                 <a href="#contact">Contact</a>
             </div>
-            <!-- Hamburger for mobile -->
-            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+
+            <a href="#contact" class="nav-btn desktop-btn">
+                Book a Call <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false" aria-controls="mobileMenu">
                 <i class="fas fa-bars"></i>
             </button>
-            <a href="#contact" class="btn btn-primary">Book a Call</a>
 
-            <!-- Mobile menu dropdown -->
             <div class="mobile-menu" id="mobileMenu">
-                <a href="#hero">Home</a>
-                <a href="#about">About</a>
-                <a href="#systems">Services</a>
-                <a href="#portfolio">Work</a>
-                <a href="#testimonials">Clients</a>
-                <a href="#contact">Contact</a>
+                <a href="#hero">Home <i class="fas fa-arrow-right"></i></a>
+                <a href="#about">About <i class="fas fa-arrow-right"></i></a>
+                <a href="#systems">Services <i class="fas fa-arrow-right"></i></a>
+                <a href="#portfolio">Work <i class="fas fa-arrow-right"></i></a>
+                <a href="#testimonials">Clients <i class="fas fa-arrow-right"></i></a>
+                <a href="#contact">Contact <i class="fas fa-arrow-right"></i></a>
+
+                <a href="#contact" class="nav-btn mobile-btn">
+                    Book a Call <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
             </div>
+
         </nav>
     </div>
 
-    <!-- HERO with floating images -->
-    <section id="hero">
-        <!-- Floating Images inside Hero -->
-        <div class="hero-floating">
-            <img class="hero-float hero-float-1" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=400&auto=format&fit=crop" alt="">
-            <img class="hero-float hero-float-2" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=400&auto=format&fit=crop" alt="">
-            <img class="hero-float hero-float-3" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=400&auto=format&fit=crop" alt="">
-            <img class="hero-float hero-float-4" src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=400&auto=format&fit=crop" alt="">
-        </div>
-
-        <div class="container hero-inner">
-            <h1 class="reveal">
-                Building Digital Systems<br>
-                That Drive Predictable Growth
-            </h1>
-            <p class="hero-sub reveal">
-                We design, build, and optimize growth systems that connect your website, CRM, 
-                and automation workflows — turning scattered efforts into a predictable revenue engine.
-            </p>
-            <div class="hero-buttons reveal">
-                <a href="#contact" class="btn btn-primary">Book a Free Consultation <i class="fas fa-arrow-right"></i></a>
-                <a href="#portfolio" class="btn btn-outline">View Our Work <i class="fas fa-play"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section-light">
-        <div class="container about-grid">
-            <div class="about-text reveal">
-                <div class="section-label">About Us</div>
-                <h2>We Build Systems, Not Just Websites</h2>
-                <p>At 10X SEO Service, we don't just deliver marketing campaigns — we architect complete growth systems. Every component, from your website to your CRM to your follow-up automation, works together seamlessly.</p>
-                <ul class="about-features">
-                    <li><i class="fas fa-check-circle"></i> Integrated digital infrastructure</li>
-                    <li><i class="fas fa-check-circle"></i> Data-driven automation strategies</li>
-                    <li><i class="fas fa-check-circle"></i> Long-term scalable frameworks</li>
-                </ul>
-                <a href="#" class="btn btn-black">Learn More About Us <i class="fas fa-arrow-right"></i></a>
-            </div>
-            <div class="about-collage reveal">
-                <img class="collage-main" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop" alt="Team">
-                <img class="collage-sub" src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=500&auto=format&fit=crop" alt="Office">
-                <div class="about-experience">
-                    <div class="num">8+</div>
-                    <div class="lbl">Years Experience</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PROCESS -->
-    <section id="process" class="section-dark">
-        <div class="container">
-            <div class="section-head reveal">
-                <div class="section-label">Our Process</div>
-                <h2 class="section-heading">How We Build Your <span class="accent-text">Growth Engine</span></h2>
-                <p class="sub">A proven four-step framework that transforms scattered marketing into a predictable, measurable system.</p>
-            </div>
-            <div class="process-grid reveal">
-                <div class="process-step">
-                    <div class="process-num">01</div>
-                    <h3>Discovery & Audit</h3>
-                    <p>We analyze your current funnel, identify leaks, and map out where the biggest opportunities lie.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-num">02</div>
-                    <h3>System Architecture</h3>
-                    <p>We design a tailored ecosystem — website, CRM, automation, and follow-up flows — built for your goals.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-num">03</div>
-                    <h3>Build & Launch</h3>
-                    <p>Our team builds, tests, and deploys everything. From pixel-perfect design to flawless automation logic.</p>
-                </div>
-                <div class="process-step">
-                    <div class="process-num">04</div>
-                    <h3>Optimize & Scale</h3>
-                    <p>We continuously monitor performance, refine campaigns, and scale what works to maximize ROI.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- PORTFOLIO -->
-    <section id="portfolio" class="section-light">
-        <div class="container">
-            <div class="portfolio-header reveal">
-                <div class="section-label" style="justify-content:center;">Case Studies</div>
-                <div class="portfolio-title">OUR BEST<br>WORKS</div>
-            </div>
-            <div class="portfolio-slider reveal">
-                <div class="slide-item">
-                    <div class="portfolio-card">
-                        <div class="portfolio-img"><img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop" alt="Dr Javed Iqbal"></div>
-                        <div class="portfolio-info">
-                            <div>
-                                <span class="portfolio-tag">Healthcare Growth</span>
-                                <h3>Dr Javed Iqbal</h3>
-                            </div>
-                            <a href="#" class="btn btn-black">View Project <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-item">
-                    <div class="portfolio-card">
-                        <div class="portfolio-img"><img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop" alt="Chaqoo Tech"></div>
-                        <div class="portfolio-info">
-                            <div>
-                                <span class="portfolio-tag">E-commerce Automation</span>
-                                <h3>Chaqoo Tech</h3>
-                            </div>
-                            <a href="#" class="btn btn-black">View Project <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-item">
-                    <div class="portfolio-card">
-                        <div class="portfolio-img"><img src="https://images.unsplash.com/photo-1553877522-43269d4ea984?q=80&w=1200&auto=format&fit=crop" alt="TIP Pakistan"></div>
-                        <div class="portfolio-info">
-                            <div>
-                                <span class="portfolio-tag">NGO Digital Platform</span>
-                                <h3>TIP Pakistan</h3>
-                            </div>
-                            <a href="#" class="btn btn-black">View Project <i class="fas fa-arrow-right"></i></a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CTA -->
-    <section id="cta" class="section-light" style="padding-top:20px;">
-        <div class="container">
-            <div class="cta-card reveal">
-                <div class="cta-inner">
-                    <div class="cta-badge">Limited Time Offer</div>
-                    <h2>Ready to Scale Your Business?</h2>
-                    <p>Let's build a predictable growth engine tailored to your goals. Book a free strategy session today and get a custom roadmap.</p>
-                    <a href="#contact" class="btn">Get Started <i class="fas fa-arrow-right"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CORE SYSTEMS -->
-    <section id="systems" class="section-dark">
-        <div class="container">
-            <div class="section-head reveal">
-                <div class="section-label">What We Do</div>
-                <h2 class="section-heading">Our Core Business <span class="accent-text">Systems</span></h2>
-                <p class="sub">Every service we offer is a building block in your complete growth infrastructure.</p>
-            </div>
-            <div class="systems-grid reveal">
-                <div class="system-card">
-                    <div class="system-icon"><i class="fas fa-chart-line"></i></div>
-                    <div class="system-content">
-                        <h3>Business Growth System</h3>
-                        <p>Build a system to generate, manage, and convert leads into paying customers — with full visibility into your pipeline.</p>
-                    </div>
-                </div>
-                <div class="system-card">
-                    <div class="system-icon"><i class="fas fa-handshake"></i></div>
-                    <div class="system-content">
-                        <h3>Lead Nurturing System</h3>
-                        <p>Get consistent, high-quality leads through automated follow-up sequences that run 24/7 without manual effort.</p>
-                    </div>
-                </div>
-                <div class="system-card">
-                    <div class="system-icon"><i class="fas fa-microchip"></i></div>
-                    <div class="system-content">
-                        <h3>AI Automation System</h3>
-                        <p>Automate your business operations using cutting-edge AI tools that reduce manual work and increase speed.</p>
-                    </div>
-                </div>
-                <div class="system-card">
-                    <div class="system-icon"><i class="fas fa-user-tie"></i></div>
-                    <div class="system-content">
-                        <h3>Personal Brand Positioning</h3>
-                        <p>Establish yourself as an authority in your industry with a strategic personal brand ecosystem.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- WHY CHOOSE US -->
-    <section id="why" class="section-light">
-        <div class="container why-grid">
-            <div class="why-text reveal">
-                <div class="section-label">Why 10X</div>
-                <h2>Why Leading Brands Choose Us</h2>
-                <p>We combine deep technical expertise with strategic marketing thinking. The result is a digital infrastructure that doesn't just look good — it performs.</p>
-                <ul class="why-list">
-                    <li>
-                        <div class="why-icon"><i class="fas fa-bolt"></i></div>
-                        <div>
-                            <h4>Performance-First Design</h4>
-                            <p>Every element is built to convert — not just to impress.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="why-icon"><i class="fas fa-cogs"></i></div>
-                        <div>
-                            <h4>End-to-End Automation</h4>
-                            <p>We connect every tool so your business runs smoothly.</p>
-                        </div>
-                    </li>
-                    <li>
-                        <div class="why-icon"><i class="fas fa-chart-bar"></i></div>
-                        <div>
-                            <h4>Transparent Reporting</h4>
-                            <p>Know exactly what's working and where your ROI comes from.</p>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="why-image reveal">
-                <img src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?q=80&w=1200&auto=format&fit=crop" alt="Team Strategy">
-            </div>
-        </div>
-    </section>
-
-    <!-- PLATFORMS -->
-    <section id="platforms" class="section-dark">
-        <div class="container platforms-grid">
-            <div class="platforms-image-collage reveal">
-                <img class="platform-main" src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=800&auto=format&fit=crop" alt="Platform">
-                <img class="platform-sub" src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=600&auto=format&fit=crop" alt="Analytics">
-            </div>
-            <div class="platforms-text reveal">
-                <div class="section-label">Our Ecosystem</div>
-                <h2>Proprietary Platforms Built for Scale</h2>
-                <p>We've developed our own suite of tools that plug directly into your business — giving you everything you need to track, optimize, and scale under one roof.</p>
-                <ul class="platform-list">
-                    <li><i class="fas fa-circle-check"></i> Unified lead & CRM management</li>
-                    <li><i class="fas fa-circle-check"></i> Real-time campaign analytics</li>
-                    <li><i class="fas fa-circle-check"></i> Automated multi-channel follow-ups</li>
-                </ul>
-                <a href="#" class="btn btn-primary">Explore Platforms <i class="fas fa-arrow-right"></i></a>
-            </div>
-        </div>
-    </section>
-
-    <!-- RESULTS -->
-    <section id="results" class="section-light">
-        <div class="container">
-            <div class="section-head reveal">
-                <div class="section-label" style="justify-content:center;">Impact</div>
-                <h2 class="section-heading">Execution Driving <span class="accent-text-black">Measurable Results</span></h2>
-            </div>
-            <div class="stats-grid reveal">
-                <div class="stat-item">
-                    <div class="stat-number">200K<span>+</span></div>
-                    <div class="stat-label">Leads Captured</div>
-                    <div class="stat-desc">Through our automated lead generation systems.</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">97<span>%</span></div>
-                    <div class="stat-label">Client Satisfaction</div>
-                    <div class="stat-desc">Built through consistent results and communication.</div>
-                </div>
-                <div class="stat-item">
-                    <div class="stat-number">60<span>+</span></div>
-                    <div class="stat-label">Businesses Served</div>
-                    <div class="stat-desc">Across multiple industries and niches globally.</div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- TESTIMONIALS -->
-    <section id="testimonials" class="section-dark">
-        <div class="container">
-            <div class="section-head reveal">
-                <div class="section-label" style="justify-content:center;">Testimonials</div>
-                <h2 class="section-heading">What Our <span class="accent-text">Clients Say</span></h2>
-                <p class="sub">Real feedback from founders, doctors, and business owners we've helped scale.</p>
-            </div>
-            <div class="testimonials-grid reveal">
-                <div class="testimonial-card">
-                    <div class="quote-mark">"</div>
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>The system they built for us completely changed how we handle patients. We are now fully booked weeks in advance — something we never thought possible.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=200&auto=format&fit=crop" alt="Dr. Javed Iqbal"></div>
-                        <div class="author-meta">
-                            <strong>Dr. Javed Iqbal</strong>
-                            <span>Medical Practice Owner</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-mark">"</div>
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>Their AI automation saved us countless hours every week. The ROI on our ad spend has tripled since integrating their CRM workflows.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?q=80&w=200&auto=format&fit=crop" alt="Tech Founder"></div>
-                        <div class="author-meta">
-                            <strong>Ahmed Khan</strong>
-                            <span>Tech Startup Founder</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-mark">"</div>
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>Professional, efficient, and genuinely results-driven. The 10X team knows exactly how to take a business from scattered to systematic.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?q=80&w=200&auto=format&fit=crop" alt="Agency Owner"></div>
-                        <div class="author-meta">
-                            <strong>Sarah Williams</strong>
-                            <span>Marketing Agency Owner</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-mark">"</div>
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>We finally have a clear view of our sales pipeline. The automated follow-ups are a total game-changer for our e-commerce operations.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" alt="E-commerce Director"></div>
-                        <div class="author-meta">
-                            <strong>Michael Chen</strong>
-                            <span>E-commerce Director</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-mark">"</div>
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-                    <p>Their team took the time to truly understand our business before proposing anything. That's rare, and the results speak for themselves.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" alt="Client"></div>
-                        <div class="author-meta">
-                            <strong>Fatima Ali</strong>
-                            <span>NGO Director</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial-card">
-                    <div class="quote-mark">"</div>
-                    <div class="testimonial-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-                    <p>Fast implementation, clear communication, and a real impact on our bottom line. Highly recommended for any growth-focused business.</p>
-                    <div class="testimonial-author">
-                        <div class="testimonial-avatar"><img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" alt="Client"></div>
-                        <div class="author-meta">
-                            <strong>Daniel Brooks</strong>
-                            <span>Business Consultant</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- CROSS MARQUEE -->
-    <section class="cross-marquee-wrapper">
-        <div class="marquee-band band-green">
-            <div class="marquee-track">
-                <div class="marquee-text">
-                    <i class="fas fa-asterisk"></i> Conversion Focused Digital Systems
-                    <i class="fas fa-asterisk"></i> Let's Get Started
-                    <i class="fas fa-asterisk"></i> CRM & Automation
-                </div>
-                <div class="marquee-text">
-                    <i class="fas fa-asterisk"></i> Conversion Focused Digital Systems
-                    <i class="fas fa-asterisk"></i> Let's Get Started
-                    <i class="fas fa-asterisk"></i> CRM & Automation
-                </div>
-            </div>
-        </div>
-        <div class="marquee-band band-black">
-            <div class="marquee-track">
-                <div class="marquee-text">
-                    <i class="fas fa-asterisk"></i> Let's Get Started
-                    <i class="fas fa-asterisk"></i> 10X SEO Service
-                    <i class="fas fa-asterisk"></i> Predictable Growth
-                </div>
-                <div class="marquee-text">
-                    <i class="fas fa-asterisk"></i> Let's Get Started
-                    <i class="fas fa-asterisk"></i> 10X SEO Service
-                    <i class="fas fa-asterisk"></i> Predictable Growth
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer id="contact">
-        <div class="container footer-grid">
-            <div class="footer-links reveal">
-                <h4>Quick Links</h4>
-                <ul>
-                    <li><a href="#hero"><i class="fas fa-chevron-right"></i> Home</a></li>
-                    <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
-                    <li><a href="#process"><i class="fas fa-chevron-right"></i> Our Process</a></li>
-                    <li><a href="#portfolio"><i class="fas fa-chevron-right"></i> Case Studies</a></li>
-                    <li><a href="#testimonials"><i class="fas fa-chevron-right"></i> Clients</a></li>
-                </ul>
-            </div>
-            <div class="footer-center reveal">
-                <img src="images/footer-logo.webp" alt="10X SEO Service Logo" class="footer-logo">
-                <p>We build integrated digital systems that drive predictable growth for businesses worldwide. From automation to CRM, we help you scale smarter.</p>
-                <div class="footer-socials">
-                    <a href="#"><i class="fab fa-facebook-f"></i></a>
-                    <a href="#"><i class="fab fa-instagram"></i></a>
-                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fab fa-twitter"></i></a>
-                </div>
-            </div>
-            <div class="footer-links reveal">
-                <h4>Contact</h4>
-                <ul class="footer-contact">
-                    <li><i class="fas fa-map-marker-alt"></i> 123 Business Avenue, Suite 500, New York, NY 10001</li>
-                    <li><i class="fas fa-phone-alt"></i> +1 (555) 123-4567</li>
-                    <li><i class="fas fa-envelope"></i> hello@10xseoservice.com</li>
-                </ul>
-            </div>
-        </div>
-        <div class="container footer-bottom">
-            <p>&copy; 2024 10X SEO Service. All Rights Reserved.</p>
-            <p>Privacy Policy | Terms of Service</p>
-        </div>
-    </footer>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
-
     <script>
-        $(document).ready(function(){
-            // Portfolio Slider
-            $('.portfolio-slider').slick({
-                infinite: true, slidesToShow: 1, slidesToScroll: 1,
-                autoplay: true, autoplaySpeed: 5000,
-                dots: true, arrows: false, fade: true,
-                cssEase: 'cubic-bezier(0.7, 0, 0.3, 1)', speed: 1200,
-                draggable: true, swipe: true
-            });
+        const hamburger = document.getElementById("hamburger");
+        const mobileMenu = document.getElementById("mobileMenu");
 
-            // Testimonials Carousel on mobile only
-            function initTestimonials() {
-                var mq = window.matchMedia('(max-width: 768px)');
-                function handleTestimonials(mq) {
-                    var $t = $('.testimonials-grid');
-                    if (mq.matches) {
-                        if (!$t.hasClass('slick-initialized')) {
-                            $t.slick({
-                                infinite: true,
-                                slidesToShow: 1,
-                                slidesToScroll: 1,
-                                autoplay: true,
-                                autoplaySpeed: 5000,
-                                dots: true,
-                                arrows: false,
-                                draggable: true,
-                                swipe: true,
-                                adaptiveHeight: true
-                            });
-                        }
-                    } else {
-                        if ($t.hasClass('slick-initialized')) {
-                            $t.slick('unslick');
-                        }
-                    }
-                }
-                handleTestimonials(mq);
-                if (mq.addEventListener) {
-                    mq.addEventListener('change', handleTestimonials);
-                } else if (mq.addListener) {
-                    mq.addListener(handleTestimonials);
-                }
-            }
-            initTestimonials();
+        hamburger.addEventListener("click", function() {
+            const isOpen = mobileMenu.classList.toggle("active");
 
-            // Hamburger toggle
-            $('#hamburger').on('click', function() {
-                $('#mobileMenu').toggleClass('active');
-            });
-            // Close mobile menu on link click
-            $('#mobileMenu a').on('click', function() {
-                $('#mobileMenu').removeClass('active');
-            });
+            hamburger.setAttribute("aria-expanded", isOpen);
+            hamburger.innerHTML = isOpen ?
+                '<i class="fas fa-xmark"></i>' :
+                '<i class="fas fa-bars"></i>';
+        });
 
-            // Scroll Reveal
-            window.addEventListener('scroll', reveal);
-            function reveal() {
-                var reveals = document.querySelectorAll('.reveal');
-                for (var i = 0; i < reveals.length; i++) {
-                    var windowHeight = window.innerHeight;
-                    var elementTop = reveals[i].getBoundingClientRect().top;
-                    var elementVisible = 100;
-                    if (elementTop < windowHeight - elementVisible) {
-                        reveals[i].classList.add('active');
-                    }
-                }
-            }
-            reveal();
+        mobileMenu.querySelectorAll("a").forEach(function(link) {
+            link.addEventListener("click", function() {
+                mobileMenu.classList.remove("active");
+                hamburger.setAttribute("aria-expanded", "false");
+                hamburger.innerHTML = '<i class="fas fa-bars"></i>';
+            });
         });
     </script>
+
+
+    <section class="x10-hero" id="hero">
+        <div class="x10-orbit x10-orbit-one"></div>
+        <div class="x10-orbit x10-orbit-two"></div>
+        <div class="x10-orbit x10-orbit-three"></div>
+
+        <div class="x10-glow x10-glow-one"></div>
+        <div class="x10-glow x10-glow-two"></div>
+
+        <div class="x10-particles" aria-hidden="true">
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+            <span></span><span></span><span></span>
+        </div>
+
+        <div class="x10-hero-inner">
+
+            <div class="x10-eyebrow x10-reveal">
+                <span class="x10-live-dot"></span> PERFORMANCE-DRIVEN DIGITAL GROWTH
+                <i class="fa-solid fa-arrow-trend-up"></i>
+            </div>
+
+            <h1 class="x10-title x10-reveal">
+                Building Digital Systems That
+                <span>Drive Predictable Growth<span class="x10-title-dot">.</span></span>
+            </h1>
+
+            <p class="x10-description x10-reveal">
+                We turn ambitious businesses into digital growth machines through intelligent SEO, creative websites and data-driven strategies.
+            </p>
+
+            <div class="x10-actions x10-reveal">
+                <a href="#systems" class="x10-btn x10-btn-primary">
+                See How It Works
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+
+                <a href="#contact" class="x10-btn x10-btn-secondary">
+                    <i class="fa-regular fa-calendar"></i> Book a Strategy Call
+                </a>
+            </div>
+
+            <div class="x10-trust-line x10-reveal">
+                <div class="x10-trust-avatars">
+                    <span><i class="fa-solid fa-chart-line"></i></span>
+                    <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                    <span><i class="fa-solid fa-code"></i></span>
+                </div>
+
+                <p>Strategy meets execution. <strong>Growth by design.</strong></p>
+            </div>
+
+            <!-- Floating visual cards -->
+            <div class="x10-showcase">
+
+                <!-- Card 1 -->
+                <div class="x10-card x10-card-team">
+                    <div class="x10-card-image x10-team-image">
+                        <i class="fa-solid fa-users"></i>
+                        <div class="x10-image-caption">
+                            <span>01 / STRATEGY</span>
+                            <strong>Built Around Your Vision</strong>
+                        </div>
+                    </div>
+                    <div class="x10-card-footer">
+                        <span class="x10-mini-dot"></span> Digital Strategy
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="x10-card x10-card-ai">
+                    <div class="x10-card-top">
+                        <span class="x10-card-label">SMART AUTOMATION</span>
+                        <i class="fa-solid fa-ellipsis"></i>
+                    </div>
+
+                    <div class="x10-robot">
+                        <div class="x10-robot-aura"></div>
+                        <div class="x10-robot-head">
+                            <span class="x10-robot-eye"></span>
+                            <span class="x10-robot-eye"></span>
+                            <span class="x10-robot-mouth"></span>
+                        </div>
+                        <div class="x10-robot-body"></div>
+                        <span class="x10-robot-spark x10-spark-one">✳</span>
+                        <span class="x10-robot-spark x10-spark-two">✦</span>
+                    </div>
+
+                    <h3>AI Assistant</h3>
+                    <p>Smarter systems. Better results.</p>
+
+                    <div class="x10-ai-status">
+                        <span></span> SYSTEM ACTIVE
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="x10-card x10-card-analytics">
+                    <div class="x10-card-top">
+                        <span class="x10-card-label">LIVE PERFORMANCE</span>
+                        <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                    </div>
+
+                    <h3>Growth Analytics</h3>
+
+                    <div class="x10-chart-value">
+                        <strong>Visibility</strong>
+                        <span><i class="fa-solid fa-arrow-trend-up"></i> Growing</span>
+                    </div>
+
+                    <div class="x10-chart">
+                        <div class="x10-chart-grid"></div>
+                        <svg viewBox="0 0 280 110" preserveAspectRatio="none" role="img" aria-label="Illustrative upward growth chart">
+                    <defs>
+                        <linearGradient id="x10-chart-fill" x1="0" y1="0" x2="0" y2="1">
+                            <stop offset="0%" stop-color="#08f703" stop-opacity=".35"/>
+                            <stop offset="100%" stop-color="#08f703" stop-opacity="0"/>
+                        </linearGradient>
+                    </defs>
+                    <path class="x10-chart-area"
+                          d="M0 94 C25 86 34 75 58 81 S91 55 117 65 S153 40 177 49 S211 18 235 30 S261 10 280 7 L280 110 L0 110 Z"/>
+                    <path class="x10-chart-line"
+                          d="M0 94 C25 86 34 75 58 81 S91 55 117 65 S153 40 177 49 S211 18 235 30 S261 10 280 7"/>
+                    <circle cx="280" cy="7" r="4" fill="#08f703" class="x10-chart-point"/>
+                </svg>
+                    </div>
+
+                    <div class="x10-chart-footer">
+                        <span>STRATEGY</span>
+                        <span>DATA</span>
+                        <span>GROWTH</span>
+                    </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="x10-card x10-card-web">
+                    <div class="x10-web-visual">
+                        <div class="x10-web-window">
+                            <div class="x10-window-bar">
+                                <span></span><span></span><span></span>
+                            </div>
+                            <div class="x10-window-content">
+                                <div class="x10-window-line"></div>
+                                <div class="x10-window-line short"></div>
+                                <div class="x10-window-block"></div>
+                                <div class="x10-window-button"></div>
+                            </div>
+                        </div>
+                        <span class="x10-web-badge">
+                    <i class="fa-solid fa-check"></i> BUILT TO CONVERT
+                </span>
+                    </div>
+
+                    <div class="x10-web-info">
+                        <span>04 / DEVELOPMENT</span>
+                        <h3>Web Experiences<br/>That Perform.</h3>
+                        <div class="x10-web-bottom">
+                            <span>DESIGN × DEVELOPMENT</span>
+                            <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Center floating label -->
+                <div class="x10-floating-label">
+                    <span class="x10-label-icon">
+                <i class="fa-solid fa-bolt"></i>
+            </span>
+                    <div>
+                        <strong>10X Digital Growth</strong>
+                        <span>Strategy in motion</span>
+                    </div>
+                    <span class="x10-label-status"></span>
+                </div>
+
+            </div>
+
+            <div class="x10-bottom-note">
+                <span>SEO</span>
+                <span>WEB DESIGN</span>
+                <span>DIGITAL STRATEGY</span>
+                <span>GROWTH SYSTEMS</span>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        (() => {
+            const hero = document.querySelector(".x10-hero");
+
+            if (!hero) return;
+
+            const revealItems = hero.querySelectorAll(".x10-reveal");
+
+            if ("IntersectionObserver" in window) {
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("x10-visible");
+                            observer.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.12
+                });
+
+                revealItems.forEach((item, index) => {
+                    item.style.transitionDelay = `${Math.min(index * 100, 500)}ms`;
+                    observer.observe(item);
+                });
+            } else {
+                revealItems.forEach((item) => {
+                    item.classList.add("x10-visible");
+                });
+            }
+
+            // Subtle 3D card movement on desktop
+            const cards = hero.querySelectorAll(".x10-card");
+            const desktopPointer = window.matchMedia(
+                "(hover: hover) and (pointer: fine)"
+            );
+            const reducedMotion = window.matchMedia(
+                "(prefers-reduced-motion: reduce)"
+            );
+
+            if (desktopPointer.matches && !reducedMotion.matches) {
+                cards.forEach((card) => {
+                    card.addEventListener("pointermove", (event) => {
+                        const rect = card.getBoundingClientRect();
+
+                        const x = (event.clientX - rect.left) / rect.width;
+                        const y = (event.clientY - rect.top) / rect.height;
+
+                        const rotateY = (x - 0.5) * 7;
+                        const rotateX = (0.5 - y) * 7;
+
+                        card.style.transform =
+                            `perspective(700px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+                    });
+
+                    card.addEventListener("pointerleave", () => {
+                        card.style.transform = "";
+                    });
+                });
+            }
+        })();
+    </script>
+
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="x10-about" id="about">
+        <div class="x10-about-inner">
+
+            <!-- Left: text content -->
+            <div class="x10-about-content">
+                <span class="x10-about-eyebrow x10-about-reveal">
+                <span class="x10-about-dot"></span> ABOUT 10X SEO SERVICE
+                </span>
+
+                <h2 class="x10-about-title x10-about-reveal">
+                    We Build SEO Systems That
+                    <span>Drive Predictable Revenue.</span>
+                </h2>
+
+                <p class="x10-about-text x10-about-reveal">
+                    At 10X SEO Service, we combine technical SEO, content strategy, and data‑driven insights to turn your website into a growth engine. Every campaign is built around your business goals — not vanity metrics — so you see real, measurable results.
+                </p>
+
+                <ul class="x10-about-list x10-about-reveal">
+                    <li><i class="fa-solid fa-check"></i> Technical SEO audits & fixes</li>
+                    <li><i class="fa-solid fa-check"></i> Content strategy & on‑page optimization</li>
+                    <li><i class="fa-solid fa-check"></i> Monthly reporting & growth tracking</li>
+                </ul>
+
+                <a href="#contact" class="x10-about-btn x10-about-reveal">
+                Get Your Free SEO Audit
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            </div>
+
+            <!-- Right: image collage (slides left on scroll down, right on scroll up) -->
+            <div class="x10-about-visual x10-about-reveal" id="x10AboutVisual">
+                <div class="x10-about-image x10-about-image-main">
+                    <img src="https://assets.cdn.filesafe.space/il4CkD2r0kFsg5nID5nY/media/6a083d35c56db4013f84ff2e.png" alt="10X SEO strategy dashboard" loading="lazy" />
+                </div>
+                <div class="x10-about-image x10-about-image-accent">
+                    <img src="https://assets.cdn.filesafe.space/il4CkD2r0kFsg5nID5nY/media/6a083d35dbe569a25d687436.png" alt="SEO growth analytics" loading="lazy" />
+                </div>
+                <span class="x10-about-badge">
+                <i class="fa-solid fa-arrow-trend-up"></i> 10X GROWTH
+            </span>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        (function() {
+            var aboutSection = document.querySelector(".x10-about");
+            if (!aboutSection) return;
+
+            /* ---------- Reveal on scroll ---------- */
+            var reveals = aboutSection.querySelectorAll(".x10-about-reveal");
+
+            if ("IntersectionObserver" in window) {
+                var observer = new IntersectionObserver(
+                    function(entries) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("x10-about-visible");
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, {
+                        threshold: 0.15,
+                        rootMargin: "0px 0px -40px 0px"
+                    }
+                );
+
+                reveals.forEach(function(el, i) {
+                    el.style.transitionDelay = Math.min(i * 120, 600) + "ms";
+                    observer.observe(el);
+                });
+            } else {
+                reveals.forEach(function(el) {
+                    el.classList.add("x10-about-visible");
+                });
+            }
+
+            /* ---------- Scroll-direction slide for the image collage ---------- */
+            var visual = document.getElementById("x10AboutVisual");
+            if (!visual) return;
+
+            var lastScrollY = window.pageYOffset;
+            var ticking = false;
+            var scrollThreshold = 8; // ignore tiny jitters
+
+            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+            function updateSlide() {
+                var currentScrollY = window.pageYOffset;
+                var delta = currentScrollY - lastScrollY;
+
+                if (Math.abs(delta) > scrollThreshold) {
+                    if (delta > 0) {
+                        // scrolling down → move left
+                        visual.classList.add("x10-visual-left");
+                        visual.classList.remove("x10-visual-right");
+                    } else {
+                        // scrolling up → move right
+                        visual.classList.add("x10-visual-right");
+                        visual.classList.remove("x10-visual-left");
+                    }
+                    lastScrollY = currentScrollY;
+                }
+                ticking = false;
+            }
+
+            function onScroll() {
+                if (!ticking) {
+                    window.requestAnimationFrame(updateSlide);
+                    ticking = true;
+                }
+            }
+
+            if (!reduceMotion.matches) {
+                window.addEventListener("scroll", onScroll, {
+                    passive: true
+                });
+            } else {
+                // ensure no transform is applied if reduced motion is preferred
+                visual.classList.remove("x10-visual-left", "x10-visual-right");
+            }
+        })();
+    </script>
+
+
+    <!-- ===== VIDEO SECTION ===== -->
+    <section class="x10-video-section" id="video">
+        <div class="x10-video-inner">
+
+            <span class="x10-video-eyebrow">
+            <span class="x10-video-dot"></span> WATCH THE STRATEGY
+            </span>
+
+            <h2 class="x10-video-title">
+                See How We Rank <span>#1 on YouTube</span>
+            </h2>
+
+            <div class="x10-video-wrapper">
+                <div id="x10YoutubePlayer" class="x10-video-frame"></div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        (function() {
+            /* ---------- Load YouTube IFrame API ---------- */
+            var tag = document.createElement("script");
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName("script")[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+
+            /* ---------- Called automatically once API is ready ---------- */
+            window.onYouTubeIframeAPIReady = function() {
+                new YT.Player("x10YoutubePlayer", {
+                    videoId: "kp5tuB99ByQ",
+                    playerVars: {
+                        autoplay: 1, // auto-play on load
+                        mute: 1, // required for autoplay in modern browsers
+                        loop: 1, // loop the video
+                        playlist: "kp5tuB99ByQ", // required for loop on a single video
+                        controls: 0, // hide YouTube controls
+                        modestbranding: 1, // hide YouTube logo
+                        rel: 0, // don't show related videos
+                        showinfo: 0, // hide video title
+                        iv_load_policy: 3, // hide annotations
+                        fs: 0, // hide fullscreen button
+                        playsinline: 1 // play inline on mobile
+                    },
+                    events: {
+                        onReady: function(e) {
+                            e.target.mute(); // ensure muted
+                            e.target.playVideo(); // start playing
+                        }
+                    }
+                });
+            };
+        })();
+    </script>
+
+    <!-- ===== OUR WORK SECTION ===== -->
+    <section class="x10-work" id="work">
+
+        <h2 class="x10-work-title">Our <span> Work</span></h2>
+
+        <div class="x10-work-stack">
+
+            <!-- Card 1 -->
+            <article class="x10-work-card" style="--i: 0;">
+                <div class="x10-work-media">
+                    <img src="https://picsum.photos/seed/work1/1600/900" alt="Project 1" loading="lazy">
+                    <div class="x10-work-caption">
+                        <span>01 / SEO Campaign</span>
+                        <strong>Ranking Breakthrough</strong>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="x10-work-card" style="--i: 1;">
+                <div class="x10-work-media">
+                    <img src="https://picsum.photos/seed/work2/1600/900" alt="Project 2" loading="lazy">
+                    <div class="x10-work-caption">
+                        <span>02 / Content Strategy</span>
+                        <strong>Organic Traffic Surge</strong>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="x10-work-card" style="--i: 2;">
+                <div class="x10-work-media">
+                    <img src="https://picsum.photos/seed/work3/1600/900" alt="Project 3" loading="lazy">
+                    <div class="x10-work-caption">
+                        <span>03 / Technical SEO</span>
+                        <strong>Site Speed Overhaul</strong>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 4 -->
+            <article class="x10-work-card" style="--i: 3;">
+                <div class="x10-work-media">
+                    <img src="https://picsum.photos/seed/work4/1600/900" alt="Project 4" loading="lazy">
+                    <div class="x10-work-caption">
+                        <span>04 / Link Building</span>
+                        <strong>Authority Growth</strong>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 5 -->
+            <article class="x10-work-card" style="--i: 4;">
+                <div class="x10-work-media">
+                    <img src="https://picsum.photos/seed/work5/1600/900" alt="Project 5" loading="lazy">
+                    <div class="x10-work-caption">
+                        <span>05 / Local SEO</span>
+                        <strong>Map Pack Domination</strong>
+                    </div>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <script>
+        (function() {
+            var stack = document.querySelector(".x10-work-stack");
+            if (!stack) return;
+
+            var cards = Array.prototype.slice.call(
+                stack.querySelectorAll(".x10-work-card")
+            );
+
+            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+            var mobileQuery = window.matchMedia("(max-width: 600px)");
+
+            var medias = cards.map(function(card) {
+                return card.querySelector(".x10-work-media");
+            });
+
+            var vh = window.innerHeight;
+            var ticking = false;
+
+            /* ---------- Reset all inline transforms (used on mobile / reduced motion) ---------- */
+            function resetStyles() {
+                medias.forEach(function(media) {
+                    if (!media) return;
+                    media.style.transform = "";
+                    media.style.opacity = "";
+                    media.style.filter = "";
+                });
+            }
+
+            /* ---------- Desktop stacking animation ---------- */
+            function update() {
+                ticking = false;
+
+                /* If mobile or reduced motion → no animation, just clean styles */
+                if (mobileQuery.matches || reduceMotion.matches) {
+                    resetStyles();
+                    return;
+                }
+
+                for (var i = 0; i < cards.length; i++) {
+                    var next = cards[i + 1];
+                    var progress = 0;
+
+                    if (next) {
+                        var nextTop = next.getBoundingClientRect().top;
+                        progress = 1 - nextTop / vh;
+                        if (progress < 0) progress = 0;
+                        if (progress > 1) progress = 1;
+                    }
+
+                    var scale = 1 - progress * 0.09;
+                    var opacity = 1 - progress * 0.55;
+                    var blur = progress * 3;
+
+                    var media = medias[i];
+                    if (!media) continue;
+
+                    media.style.transform = "scale(" + scale + ")";
+                    media.style.opacity = opacity;
+                    media.style.filter = "blur(" + blur + "px)";
+                }
+            }
+
+            function onScroll() {
+                if (!ticking) {
+                    ticking = true;
+                    window.requestAnimationFrame(update);
+                }
+            }
+
+            function onResize() {
+                vh = window.innerHeight;
+                update();
+            }
+
+            /* ---------- Attach listeners once ---------- */
+            window.addEventListener("scroll", onScroll, {
+                passive: true
+            });
+            window.addEventListener("resize", onResize);
+
+            /* ---------- React when crossing the mobile / desktop breakpoint ---------- */
+            function handleBreakpointChange() {
+                if (mobileQuery.matches) {
+                    resetStyles();
+                } else {
+                    update();
+                }
+            }
+
+            if (mobileQuery.addEventListener) {
+                mobileQuery.addEventListener("change", handleBreakpointChange);
+            } else if (mobileQuery.addListener) {
+                /* Safari < 14 */
+                mobileQuery.addListener(handleBreakpointChange);
+            }
+
+            /* ---------- First run ---------- */
+            if (mobileQuery.matches || reduceMotion.matches) {
+                resetStyles();
+            } else {
+                update();
+            }
+        })();
+    </script>
+    <!-- ===== TRUST SECTION ===== -->
+    <section class="x10-trust" id="trust">
+        <div class="x10-trust-inner">
+
+            <span class="x10-trust-eyebrow">
+            <span class="x10-trust-dot"></span> TRUSTED BY GROWTH-FOCUSED BRANDS
+            </span>
+
+            <h2 class="x10-trust-title">
+                Brands That <span>Trust 10X</span>
+            </h2>
+
+            <p class="x10-trust-text">
+                From startups to established companies — we partner with teams that want real, measurable growth from their digital presence.
+            </p>
+
+        </div>
+
+        <!-- Logo marquee -->
+        <div class="x10-trust-marquee" aria-label="Client logos">
+            <div class="x10-trust-track">
+
+                <!-- Set 1 -->
+                <div class="x10-trust-logo">
+                    <img src="https://10xdigitalventures.com/wp-content/uploads/2026/04/Artboard-6-1.png" alt="Client logo" loading="lazy">
+                </div>
+                <div class="x10-trust-logo">
+                    <img src="https://10xdigitalventures.com/wp-content/uploads/2026/04/Artboard-2-1.png" alt="Client logo" loading="lazy">
+                </div>
+                <div class="x10-trust-logo">
+                    <img src="https://10xdigitalventures.com/wp-content/uploads/2026/04/Artboard-17.png" alt="Client logo" loading="lazy">
+                </div>
+                <div class="x10-trust-logo">
+                    <img src="https://10xdigitalventures.com/wp-content/uploads/2026/04/Artboard-11.png" alt="Client logo" loading="lazy">
+                </div>
+                <div class="x10-trust-logo">
+                    <img src="https://10xdigitalventures.com/wp-content/uploads/2026/04/Artboard-12.png" alt="Client logo" loading="lazy">
+                </div>
+                <div class="x10-trust-logo">
+                    <img src="https://10xdigitalventures.com/wp-content/uploads/2026/04/Artboard-7.png" alt="Client logo" loading="lazy">
+                </div>
+                <div class="x10-trust-logo">
+                    <img src="https://10xdigitalventures.com/wp-content/uploads/2026/04/Artboard-4.png" alt="Client logo" loading="lazy">
+                </div>
+
+                <!-- Set 2 (duplicate for seamless loop) -->
+                <div class="x10-trust-logo" aria-hidden="true">
+                    <img src="https://10xdigitalventures.com/wp-content/uploads/2026/04/Artboard-6-1.png" alt="" loading="lazy">
+                </div>
+                <div class="x10-trust-logo" aria-hidden="true">
+                    <img src="https://10xdigitalventures.com/wp-content/uploads/2026/04/Artboard-2-1.png" alt="" loading="lazy">
+                </div>
+                <div class="x10-trust-logo" aria-hidden="true">
+                    <img src="https://10xdigitalventures.com/wp-content/uploads/2026/04/Artboard-17.png" alt="" loading="lazy">
+                </div>
+                <div class="x10-trust-logo" aria-hidden="true">
+                    <img src="https://10xdigitalventures.com/wp-content/uploads/2026/04/Artboard-11.png" alt="" loading="lazy">
+                </div>
+                <div class="x10-trust-logo" aria-hidden="true">
+                    <img src="https://10xdigitalventures.com/wp-content/uploads/2026/04/Artboard-12.png" alt="" loading="lazy">
+                </div>
+                <div class="x10-trust-logo" aria-hidden="true">
+                    <img src="https://10xdigitalventures.com/wp-content/uploads/2026/04/Artboard-7.png" alt="" loading="lazy">
+                </div>
+                <div class="x10-trust-logo" aria-hidden="true">
+                    <img src="https://10xdigitalventures.com/wp-content/uploads/2026/04/Artboard-4.png" alt="" loading="lazy">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ===== CORE BUSINESS SYSTEMS SECTION ===== -->
+    <section class="x10-systems" id="systems">
+        <div class="x10-systems-inner">
+
+            <!-- Header: title left, para + button right -->
+            <div class="x10-systems-head">
+
+                <div class="x10-systems-head-left">
+                    <span class="x10-systems-eyebrow x10-sys-reveal">
+                    <span class="x10-sys-dot"></span> WHAT WE BUILD
+                    </span>
+
+                    <h2 class="x10-systems-title x10-sys-reveal">
+                        Our Core<br>Business Systems
+                    </h2>
+                </div>
+
+                <div class="x10-systems-head-right">
+                    <p class="x10-systems-sub x10-sys-reveal">
+                        Explore all the systems built to scale your business — from lead generation and nurturing to AI automation and personal brand positioning.
+                    </p>
+
+                    <a href="#contact" class="x10-systems-btn x10-sys-reveal">
+                    Explore All Systems
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                </div>
+
+            </div>
+
+            <!-- Cards grid -->
+            <div class="x10-systems-grid">
+
+                <!-- Card 1 -->
+                <article class="x10-sys-card x10-sys-reveal" style="--i: 0;">
+                    <div class="x10-sys-icon">
+                        <i class="fa-solid fa-chart-line"></i>
+                    </div>
+                    <h3 class="x10-sys-card-title">Business Growth System</h3>
+                    <p class="x10-sys-card-text">
+                        Build a system to generate, manage, and convert leads
+                    </p>
+                    <span class="x10-sys-card-link">
+                    Learn more <i class="fa-solid fa-arrow-right"></i>
+                </span>
+                </article>
+
+                <!-- Card 2 -->
+                <article class="x10-sys-card x10-sys-reveal" style="--i: 1;">
+                    <div class="x10-sys-icon">
+                        <i class="fa-solid fa-filter-circle-dollar"></i>
+                    </div>
+                    <h3 class="x10-sys-card-title">Lead Nurturing System</h3>
+                    <p class="x10-sys-card-text">
+                        Get consistent, high-quality leads for your business
+                    </p>
+                    <span class="x10-sys-card-link">
+                    Learn more <i class="fa-solid fa-arrow-right"></i>
+                </span>
+                </article>
+
+                <!-- Card 3 -->
+                <article class="x10-sys-card x10-sys-reveal" style="--i: 2;">
+                    <div class="x10-sys-icon">
+                        <i class="fa-solid fa-robot"></i>
+                    </div>
+                    <h3 class="x10-sys-card-title">AI Automation System</h3>
+                    <p class="x10-sys-card-text">
+                        Automate your business operations and follow-ups
+                    </p>
+                    <span class="x10-sys-card-link">
+                    Learn more <i class="fa-solid fa-arrow-right"></i>
+                </span>
+                </article>
+
+                <!-- Card 4 -->
+                <article class="x10-sys-card x10-sys-reveal" style="--i: 3;">
+                    <div class="x10-sys-icon">
+                        <i class="fa-solid fa-user-tie"></i>
+                    </div>
+                    <h3 class="x10-sys-card-title">Personal Brand Positioning</h3>
+                    <p class="x10-sys-card-text">
+                        Build authority, trust, and attract the right clients
+                    </p>
+                    <span class="x10-sys-card-link">
+                    Learn more <i class="fa-solid fa-arrow-right"></i>
+                </span>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function() {
+            var section = document.querySelector(".x10-systems");
+            if (!section) return;
+
+            var items = section.querySelectorAll(".x10-sys-reveal");
+            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+            if (reduceMotion.matches) {
+                items.forEach(function(el) {
+                    el.classList.add("x10-sys-visible");
+                });
+                return;
+            }
+
+            if ("IntersectionObserver" in window) {
+                var observer = new IntersectionObserver(
+                    function(entries) {
+                        entries.forEach(function(entry) {
+                            if (entry.isIntersecting) {
+                                entry.target.classList.add("x10-sys-visible");
+                                observer.unobserve(entry.target);
+                            }
+                        });
+                    }, {
+                        threshold: 0.12,
+                        rootMargin: "0px 0px -60px 0px"
+                    }
+                );
+
+                items.forEach(function(el, i) {
+                    el.style.transitionDelay = Math.min(i * 100, 700) + "ms";
+                    observer.observe(el);
+                });
+            } else {
+                items.forEach(function(el) {
+                    el.classList.add("x10-sys-visible");
+                });
+            }
+        })();
+    </script>
+
+    <!-- ===== OUR PLATFORMS SECTION ===== -->
+    <!-- ===== OUR PLATFORMS SECTION ===== -->
+    <section class="x10-platforms" id="platforms">
+        <div class="x10-platforms-inner">
+
+            <!-- Header -->
+            <header class="x10-platforms-header">
+                <span class="x10-platforms-eyebrow x10-pl-reveal">
+                <span class="x10-pl-dot"></span> OUR PLATFORMS
+                </span>
+                <h2 class="x10-platforms-heading x10-pl-reveal">
+                    One Family. <span>Three Platforms.</span>
+                </h2>
+                <p class="x10-platforms-tagline x10-pl-reveal">
+                    Different brands, one obsession — building systems that help people grow.
+                </p>
+            </header>
+
+            <!-- Stage -->
+            <div class="x10-platforms-stage">
+                <div class="x10-platforms-grid">
+
+                    <!-- LEFT: scattered boxes that collapse into a collage -->
+                    <div class="x10-platforms-visual" id="x10PlatformVisual">
+
+                        <div class="x10-platform-box" style="--x1:-130px;--y1:-120px;--r1:-9deg;--s1:1;--x2:-55px;--y2:-50px;--r2:-6deg;--s2:1;--d:0s;z-index:3;">
+                            <img src="https://10xmedix.com/wp-content/uploads/2025/06/10xMedix.png" alt="10xMedix">
+                        </div>
+
+                        <div class="x10-platform-box" style="--x1:130px;--y1:-120px;--r1:8deg;--s1:1;--x2:0px;--y2:0px;--r2:0deg;--s2:1.04;--d:0.12s;z-index:2;">
+                            <img src="https://mentoringhub.online/wp-content/uploads/2025/07/1.png" alt="Mentoring Hub">
+                        </div>
+
+                        <div class="x10-platform-box" style="--x1:-130px;--y1:120px;--r1:-6deg;--s1:1;--x2:55px;--y2:50px;--r2:6deg;--s2:1;--d:0.24s;z-index:1;">
+                            <img src="https://10xcollab.com/wp-content/uploads/2025/05/Logo.png" alt="10xCollab">
+                        </div>
+
+                    </div>
+
+                    <!-- RIGHT: heading + paragraph -->
+                    <div class="x10-platforms-content">
+                        <h3 class="x10-platforms-subtitle x10-pl-reveal">
+                            Built to solve <span>real problems</span>, not just look pretty.
+                        </h3>
+                        <p class="x10-platforms-text x10-pl-reveal">
+                            Each platform in the 10X family focuses on a different stage of growth — from healthcare marketing and clinical visibility, to mentorship, to creator collaboration. Together they form one ecosystem where businesses and individuals can scale with clarity.
+                        </p>
+                        <a href="#contact" class="x10-platforms-btn x10-pl-reveal">
+                        Explore All Platforms
+                        <i class="fa-solid fa-arrow-right"></i>
+                    </a>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        (function() {
+            var visual = document.getElementById("x10PlatformVisual");
+            if (!visual) return;
+
+            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+            /* ---------- Collage animation (scatter ↔ collage) ---------- */
+            if (reduceMotion.matches) {
+                visual.classList.add("is-active");
+            } else if ("IntersectionObserver" in window) {
+                var collageObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            visual.classList.add("is-active");
+                        } else {
+                            /* reverse when scrolled away, so it replays */
+                            visual.classList.remove("is-active");
+                        }
+                    });
+                }, {
+                    threshold: 0.35,
+                    rootMargin: "0px 0px -60px 0px"
+                });
+
+                collageObserver.observe(visual);
+            } else {
+                visual.classList.add("is-active");
+            }
+
+            /* ---------- Reveal header + right content ---------- */
+            var section = document.querySelector(".x10-platforms");
+            var revealItems = section.querySelectorAll(".x10-pl-reveal");
+
+            if ("IntersectionObserver" in window) {
+                var revealObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("x10-pl-visible");
+                            revealObserver.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.15,
+                    rootMargin: "0px 0px -40px 0px"
+                });
+
+                revealItems.forEach(function(el, i) {
+                    el.style.transitionDelay = Math.min(i * 90, 450) + "ms";
+                    revealObserver.observe(el);
+                });
+            } else {
+                revealItems.forEach(function(el) {
+                    el.classList.add("x10-pl-visible");
+                });
+            }
+        })();
+    </script>
+
+    <!-- ===== COUNTER SECTION ===== -->
+    <section class="x10-counter" id="counter">
+        <div class="x10-counter-inner">
+
+            <!-- LEFT: counters -->
+            <div class="x10-counter-left">
+                <span class="x10-counter-eyebrow x10-ct-reveal">
+                <span class="x10-ct-dot"></span> BY THE NUMBERS
+                </span>
+
+                <h2 class="x10-counter-heading x10-ct-reveal">
+                    Real Results.<br><span>Measured Growth.</span>
+                </h2>
+
+                <div class="x10-counter-stats">
+
+                    <div class="x10-counter-item x10-ct-reveal">
+                        <div class="x10-counter-value">
+                            <span class="x10-count" data-target="250">0</span><span class="x10-counter-suffix">+</span>
+                        </div>
+                        <span class="x10-counter-label">Projects Delivered</span>
+                    </div>
+
+                    <div class="x10-counter-item x10-ct-reveal">
+                        <div class="x10-counter-value">
+                            <span class="x10-count" data-target="98">0</span><span class="x10-counter-suffix">%</span>
+                        </div>
+                        <span class="x10-counter-label">Client Retention</span>
+                    </div>
+
+                    <div class="x10-counter-item x10-ct-reveal">
+                        <div class="x10-counter-value">
+                            <span class="x10-count" data-target="12">0</span><span class="x10-counter-suffix">M+</span>
+                        </div>
+                        <span class="x10-counter-label">Revenue Generated</span>
+                    </div>
+
+                    <div class="x10-counter-item x10-ct-reveal">
+                        <div class="x10-counter-value">
+                            <span class="x10-count" data-target="8">0</span><span class="x10-counter-suffix">Yrs</span>
+                        </div>
+                        <span class="x10-counter-label">Industry Experience</span>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT: draggable word blocks -->
+            <div class="x10-counter-right">
+                <div class="x10-word-stage" id="x10WordStage">
+
+                    <div class="x10-word-block" style="--d: 0s;" data-x="0.02" data-y="0.55">GROWTH</div>
+                    <div class="x10-word-block" style="--d: .15s;" data-x="0.55" data-y="0.58">STRATEGY</div>
+                    <div class="x10-word-block" style="--d: .30s;" data-x="0.05" data-y="0.70">RESULTS</div>
+                    <div class="x10-word-block" style="--d: .45s;" data-x="0.60" data-y="0.72">IMPACT</div>
+                    <div class="x10-word-block" style="--d: .60s;" data-x="0.35" data-y="0.80">SCALE</div>
+                    <div class="x10-word-block" style="--d: .75s;" data-x="0.72" data-y="0.82">SEO</div>
+                    <div class="x10-word-block" style="--d: .90s;" data-x="0.02" data-y="0.88">AUTOMATION</div>
+                    <div class="x10-word-block" style="--d: 1.05s;" data-x="0.42" data-y="0.90">BRANDING</div>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <script>
+        (function() {
+            var section = document.querySelector(".x10-counter");
+            if (!section) return;
+
+            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+            /* ---------- 1. Reveal animations ---------- */
+            var revealItems = section.querySelectorAll(".x10-ct-reveal");
+            if ("IntersectionObserver" in window) {
+                var revealObs = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("x10-ct-visible");
+                            revealObs.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.15,
+                    rootMargin: "0px 0px -50px 0px"
+                });
+
+                revealItems.forEach(function(el) {
+                    revealObs.observe(el);
+                });
+            } else {
+                revealItems.forEach(function(el) {
+                    el.classList.add("x10-ct-visible");
+                });
+            }
+
+            /* ---------- 2. Counter animation ---------- */
+            var counters = section.querySelectorAll(".x10-count");
+
+            function animateCounter(el) {
+                var target = parseInt(el.getAttribute("data-target"), 10) || 0;
+                var duration = 1800;
+                var startTime = null;
+
+                function tick(now) {
+                    if (startTime === null) startTime = now;
+                    var progress = Math.min((now - startTime) / duration, 1);
+                    var eased = 1 - Math.pow(1 - progress, 3);
+                    el.textContent = Math.floor(eased * target).toLocaleString();
+                    if (progress < 1) requestAnimationFrame(tick);
+                    else el.textContent = target.toLocaleString();
+                }
+                requestAnimationFrame(tick);
+            }
+
+            if (!reduceMotion.matches && "IntersectionObserver" in window) {
+                var counterObs = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            animateCounter(entry.target);
+                            counterObs.unobserve(entry.target);
+                        }
+                    });
+                }, {
+                    threshold: 0.4
+                });
+                counters.forEach(function(c) {
+                    counterObs.observe(c);
+                });
+            } else {
+                counters.forEach(function(c) {
+                    c.textContent = (parseInt(c.getAttribute("data-target"), 10) || 0).toLocaleString();
+                });
+            }
+
+            /* ---------- 3. Word blocks: drop when section enters view ---------- */
+            var stage = document.getElementById("x10WordStage");
+            if (!stage) return;
+
+            if (!reduceMotion.matches && "IntersectionObserver" in window) {
+                var stageObserver = new IntersectionObserver(function(entries) {
+                    entries.forEach(function(entry) {
+                        if (entry.isIntersecting) {
+                            stage.classList.add("is-live");
+                            stageObserver.unobserve(stage);
+                        }
+                    });
+                }, {
+                    threshold: 0.25,
+                    rootMargin: "0px 0px -40px 0px"
+                });
+                stageObserver.observe(stage);
+            } else {
+                stage.classList.add("is-live");
+            }
+
+            /* ---------- 4. Position + drag word blocks (with clamping) ---------- */
+            var blocks = Array.prototype.slice.call(stage.querySelectorAll(".x10-word-block"));
+            var highestZ = 20;
+
+            /* Store each block's target x/y as a ratio (0–1) so it scales with the stage */
+            var blocksMeta = blocks.map(function(block) {
+                return {
+                    el: block,
+                    ratioX: parseFloat(block.getAttribute("data-x")) || 0,
+                    ratioY: parseFloat(block.getAttribute("data-y")) || 0,
+                    baseX: 0,
+                    baseY: 0
+                };
+            });
+
+            function clamp(v, min, max) {
+                return Math.max(min, Math.min(max, v));
+            }
+
+            /* Recompute pixel positions from ratios, clamp to stage bounds */
+            function layoutBlocks() {
+                var stageW = stage.clientWidth;
+                var stageH = stage.clientHeight;
+
+                blocksMeta.forEach(function(m) {
+                    var blockW = m.el.offsetWidth;
+                    var blockH = m.el.offsetHeight;
+
+                    /* available space inside the stage (with 12px inner margin) */
+                    var maxX = Math.max(0, stageW - blockW - 24);
+                    var maxY = Math.max(0, stageH - blockH - 24);
+
+                    m.baseX = clamp(m.ratioX * maxX + 12, 0, maxX);
+                    m.baseY = clamp(m.ratioY * maxY + 12, 0, maxY);
+
+                    m.el.style.setProperty("--_x", m.baseX + "px");
+                    m.el.style.setProperty("--_y", m.baseY + "px");
+                    m.el.style.setProperty("--_r", "0deg");
+                });
+            }
+
+            /* Run layout once fonts/layout are ready */
+            if (document.fonts && document.fonts.ready) {
+                document.fonts.ready.then(layoutBlocks);
+            }
+            layoutBlocks();
+            window.addEventListener("resize", layoutBlocks);
+
+            /* ---------- Drag handlers (touch + mouse) ---------- */
+            blocksMeta.forEach(function(m) {
+                var block = m.el;
+                var startX = 0,
+                    startY = 0;
+                var dragging = false;
+                var pointerId = null;
+
+                function onDown(e) {
+                    if (e.pointerType === "mouse" && e.button !== 0) return;
+                    if (!stage.classList.contains("is-live")) return;
+
+                    dragging = true;
+                    pointerId = e.pointerId;
+                    startX = e.clientX;
+                    startY = e.clientY;
+
+                    block.classList.add("is-dragging");
+                    block.style.zIndex = ++highestZ;
+
+                    try {
+                        block.setPointerCapture(pointerId);
+                    } catch (err) {}
+                }
+
+                function onMove(e) {
+                    if (!dragging || e.pointerId !== pointerId) return;
+
+                    var stageW = stage.clientWidth;
+                    var stageH = stage.clientHeight;
+                    var blockW = block.offsetWidth;
+                    var blockH = block.offsetHeight;
+
+                    var maxX = Math.max(0, stageW - blockW);
+                    var maxY = Math.max(0, stageH - blockH);
+
+                    var dx = e.clientX - startX;
+                    var dy = e.clientY - startY;
+
+                    /* Clamp inside the stage so the block never leaves the box */
+                    var x = clamp(m.baseX + dx, 0, maxX);
+                    var y = clamp(m.baseY + dy, 0, maxY);
+
+                    block.style.setProperty("--_x", x + "px");
+                    block.style.setProperty("--_y", y + "px");
+                    block.style.setProperty("--_r", ((e.clientX - startX) * 0.05) + "deg");
+                }
+
+                function onUp(e) {
+                    if (!dragging || (e && e.pointerId !== pointerId)) return;
+                    dragging = false;
+
+                    var stageW = stage.clientWidth;
+                    var stageH = stage.clientHeight;
+                    var blockW = block.offsetWidth;
+                    var blockH = block.offsetHeight;
+
+                    var maxX = Math.max(0, stageW - blockW);
+                    var maxY = Math.max(0, stageH - blockH);
+
+                    var x = parseFloat(block.style.getPropertyValue("--_x")) || m.baseX;
+                    var y = parseFloat(block.style.getPropertyValue("--_y")) || m.baseY;
+
+                    m.baseX = clamp(x, 0, maxX);
+                    m.baseY = clamp(y, 0, maxY);
+
+                    block.style.setProperty("--_r", "0deg");
+                    block.classList.remove("is-dragging");
+
+                    if (pointerId !== null && block.hasPointerCapture && block.hasPointerCapture(pointerId)) {
+                        try {
+                            block.releasePointerCapture(pointerId);
+                        } catch (err) {}
+                    }
+                    pointerId = null;
+                }
+
+                block.addEventListener("pointerdown", onDown);
+                block.addEventListener("pointermove", onMove);
+                block.addEventListener("pointerup", onUp);
+                block.addEventListener("pointercancel", onUp);
+            });
+        })();
+    </script>
+
+    <!-- ===== 3D TESTIMONIAL CAROUSEL ===== -->
+    <section class="x10-testi" id="testimonials">
+        <div class="x10-testi-inner">
+
+            <!-- Header -->
+            <header class="x10-testi-header">
+                <span class="x10-testi-eyebrow">
+                <span class="x10-testi-dot"></span> CLIENT STORIES
+                </span>
+                <h2 class="x10-testi-heading">
+                    What Our Clients <span>Say About Us</span>
+                </h2>
+                <p class="x10-testi-sub">
+                    Real feedback from the brands and founders we've helped grow.
+                </p>
+            </header>
+
+            <!-- 3D Carousel -->
+            <div class="x10-testi-carousel">
+                <div class="x10-testi-stage" id="x10TestiStage">
+
+                    <article class="x10-testi-card">
+                        <div class="x10-testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="x10-testi-text">
+                            They completely transformed our online presence. Organic traffic tripled in under six months and our lead quality has never been better.
+                        </p>
+                        <div class="x10-testi-author">
+                            <div class="x10-testi-avatar">A</div>
+                            <div class="x10-testi-info">
+                                <strong>Arjun Mehta</strong>
+                                <span>Founder, Northline Studio</span>
+                            </div>
+                        </div>
+                        <div class="x10-testi-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </article>
+
+                    <article class="x10-testi-card">
+                        <div class="x10-testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="x10-testi-text">
+                            The strategy they built for us was surgical. Every decision was backed by data — and it showed in our revenue numbers.
+                        </p>
+                        <div class="x10-testi-author">
+                            <div class="x10-testi-avatar">S</div>
+                            <div class="x10-testi-info">
+                                <strong>Sarah Kapoor</strong>
+                                <span>CEO, Bloomfield Co.</span>
+                            </div>
+                        </div>
+                        <div class="x10-testi-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </article>
+
+                    <article class="x10-testi-card">
+                        <div class="x10-testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="x10-testi-text">
+                            Working with this team felt like adding a full growth department overnight. Communication was sharp, execution was flawless.
+                        </p>
+                        <div class="x10-testi-author">
+                            <div class="x10-testi-avatar">R</div>
+                            <div class="x10-testi-info">
+                                <strong>Rohan Verma</strong>
+                                <span>Director, Peakline Media</span>
+                            </div>
+                        </div>
+                        <div class="x10-testi-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </article>
+
+                    <article class="x10-testi-card">
+                        <div class="x10-testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="x10-testi-text">
+                            We've worked with three agencies before. None of them came close to the clarity and ROI we get from this team.
+                        </p>
+                        <div class="x10-testi-author">
+                            <div class="x10-testi-avatar">M</div>
+                            <div class="x10-testi-info">
+                                <strong>Maya Sharma</strong>
+                                <span>Founder, Lumen Wellness</span>
+                            </div>
+                        </div>
+                        <div class="x10-testi-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </article>
+
+                    <article class="x10-testi-card">
+                        <div class="x10-testi-quote"><i class="fa-solid fa-quote-left"></i></div>
+                        <p class="x10-testi-text">
+                            Their automation systems saved us 30+ hours per week. The ROI was immediate and it keeps compounding.
+                        </p>
+                        <div class="x10-testi-author">
+                            <div class="x10-testi-avatar">K</div>
+                            <div class="x10-testi-info">
+                                <strong>Karan Singh</strong>
+                                <span>COO, Vertex Labs</span>
+                            </div>
+                        </div>
+                        <div class="x10-testi-stars">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                    </article>
+
+                </div>
+
+                <!-- Controls -->
+                <div class="x10-testi-controls">
+                    <button type="button" class="x10-testi-nav" id="x10TestiPrev" aria-label="Previous">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+
+                    <div class="x10-testi-dots" id="x10TestiDots"></div>
+
+                    <button type="button" class="x10-testi-nav" id="x10TestiNext" aria-label="Next">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        (function() {
+            var stage = document.getElementById("x10TestiStage");
+            if (!stage) return;
+
+            var cards = Array.prototype.slice.call(stage.querySelectorAll(".x10-testi-card"));
+            var total = cards.length;
+            if (!total) return;
+
+            var prevBtn = document.getElementById("x10TestiPrev");
+            var nextBtn = document.getElementById("x10TestiNext");
+            var dotsBox = document.getElementById("x10TestiDots");
+
+            var current = 0;
+            var autoplayTimer = null;
+            var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+
+            /* ---------- Detect layout ---------- */
+            function isMobile() {
+                return window.matchMedia("(max-width: 720px)").matches;
+            }
+
+            function isTablet() {
+                return window.matchMedia("(max-width: 1024px) and (min-width: 721px)").matches;
+            }
+
+            /* ---------- Config based on screen ---------- */
+            function getConfig() {
+                if (isMobile()) {
+                    /* Mobile: 1 centered card */
+                    return {
+                        cardW: 280,
+                        cardH: 380,
+                        gap: 24,
+                        /* translateX step for neighbors */
+                        depth: 120,
+                        /* translateZ offset for neighbors */
+                        visible: 1
+                    };
+                }
+                if (isTablet()) {
+                    /* Tablet: 3 visible, tighter */
+                    return {
+                        cardW: 300,
+                        cardH: 400,
+                        gap: 220,
+                        depth: 160,
+                        visible: 3
+                    };
+                }
+                /* Desktop: 3 visible, spacious */
+                return {
+                    cardW: 360,
+                    cardH: 430,
+                    gap: 280,
+                    depth: 200,
+                    visible: 3
+                };
+            }
+
+            /* ---------- Build dots ---------- */
+            function buildDots() {
+                dotsBox.innerHTML = "";
+                cards.forEach(function(_, i) {
+                    var d = document.createElement("button");
+                    d.type = "button";
+                    d.className = "x10-testi-dot-nav" + (i === current ? " is-active" : "");
+                    d.setAttribute("aria-label", "Go to testimonial " + (i + 1));
+                    d.addEventListener("click", function() {
+                        goTo(i);
+                        restartAutoplay();
+                    });
+                    dotsBox.appendChild(d);
+                });
+            }
+
+            /* ---------- Position every card ---------- */
+            function layout() {
+                var cfg = getConfig();
+
+                /* distance from current, wrapped into smallest signed offset */
+                function signedOffset(i) {
+                    var d = i - current;
+                    /* wrap so we rotate infinitely in both directions */
+                    if (d > total / 2) d -= total;
+                    if (d < -total / 2) d += total;
+                    return d;
+                }
+
+                cards.forEach(function(card, i) {
+                    var offset = signedOffset(i);
+                    var abs = Math.abs(offset);
+
+                    /* Only show a few cards on each side; hide the rest */
+                    var maxVisible = isMobile() ? 1 : 2;
+
+                    var x = offset * cfg.gap;
+                    var z = -abs * cfg.depth;
+                    var scale = offset === 0 ? 1 : 1 - abs * 0.08;
+                    var opacity = abs > maxVisible ? 0 : (offset === 0 ? 1 : 1 - abs * 0.25);
+                    var rotate = offset * 6; /* slight tilt for side cards */
+                    var zIndex = 100 - abs;
+
+                    card.style.width = cfg.cardW + "px";
+                    card.style.height = cfg.cardH + "px";
+                    card.style.transform =
+                        "translate(-50%, -50%) " +
+                        "translateX(" + x + "px) " +
+                        "translateZ(" + z + "px) " +
+                        "rotateY(" + (-rotate) + "deg) " +
+                        "scale(" + scale + ")";
+                    card.style.opacity = opacity;
+                    card.style.zIndex = zIndex;
+                    card.style.pointerEvents = offset === 0 ? "auto" : "none";
+                    card.classList.toggle("is-active", offset === 0);
+                });
+            }
+
+            function updateDots() {
+                var dots = dotsBox.querySelectorAll(".x10-testi-dot-nav");
+                dots.forEach(function(d, i) {
+                    d.classList.toggle("is-active", i === current);
+                });
+            }
+
+            function goTo(index) {
+                current = (index + total) % total;
+                layout();
+                updateDots();
+            }
+
+            function next() {
+                goTo(current + 1);
+            }
+
+            function prev() {
+                goTo(current - 1);
+            }
+
+            /* ---------- Buttons ---------- */
+            nextBtn.addEventListener("click", function() {
+                next();
+                restartAutoplay();
+            });
+            prevBtn.addEventListener("click", function() {
+                prev();
+                restartAutoplay();
+            });
+
+            /* ---------- Keyboard ---------- */
+            document.addEventListener("keydown", function(e) {
+                if (!isInViewport(stage)) return;
+                if (e.key === "ArrowRight") {
+                    next();
+                    restartAutoplay();
+                }
+                if (e.key === "ArrowLeft") {
+                    prev();
+                    restartAutoplay();
+                }
+            });
+
+            /* ---------- Swipe ---------- */
+            var startX = 0,
+                startY = 0,
+                tracking = false;
+            stage.addEventListener("pointerdown", function(e) {
+                if (e.pointerType === "mouse" && e.button !== 0) return;
+                tracking = true;
+                startX = e.clientX;
+                startY = e.clientY;
+            });
+            stage.addEventListener("pointerup", function(e) {
+                if (!tracking) return;
+                tracking = false;
+                var dx = e.clientX - startX;
+                var dy = e.clientY - startY;
+                if (Math.abs(dx) > 45 && Math.abs(dx) > Math.abs(dy)) {
+                    if (dx < 0) next();
+                    else prev();
+                    restartAutoplay();
+                }
+            });
+            stage.addEventListener("pointercancel", function() {
+                tracking = false;
+            });
+
+            /* ---------- Autoplay ---------- */
+            function startAutoplay() {
+                if (reduceMotion.matches) return;
+                stopAutoplay();
+                autoplayTimer = setInterval(next, 5500);
+            }
+
+            function stopAutoplay() {
+                if (autoplayTimer) {
+                    clearInterval(autoplayTimer);
+                    autoplayTimer = null;
+                }
+            }
+
+            function restartAutoplay() {
+                stopAutoplay();
+                startAutoplay();
+            }
+            stage.addEventListener("mouseenter", stopAutoplay);
+            stage.addEventListener("mouseleave", startAutoplay);
+            document.addEventListener("visibilitychange", function() {
+                if (document.hidden) stopAutoplay();
+                else startAutoplay();
+            });
+
+            /* ---------- Helpers ---------- */
+            function isInViewport(el) {
+                var r = el.getBoundingClientRect();
+                return r.top < window.innerHeight && r.bottom > 0;
+            }
+
+            /* ---------- Resize ---------- */
+            var resizeTimer;
+            window.addEventListener("resize", function() {
+                clearTimeout(resizeTimer);
+                resizeTimer = setTimeout(layout, 120);
+            });
+
+            /* ---------- Init ---------- */
+            buildDots();
+            requestAnimationFrame(function() {
+                layout();
+                startAutoplay();
+            });
+        })();
+    </script>
+
+    <!-- ===== DUAL MARQUEE SECTION ===== -->
+    <section class="x10-marquee-section" id="marquee">
+        <div class="x10-marquee-stage">
+
+            <!-- Strip 1 — Black / White text (tilts one way) -->
+            <div class="x10-marquee-strip x10-marquee-strip--dark">
+                <div class="x10-marquee-track x10-marquee-track--left">
+
+                    <span class="x10-marquee-item">SEO</span>
+                    <span class="x10-marquee-sep">✦</span>
+                    <span class="x10-marquee-item">WEB DESIGN</span>
+                    <span class="x10-marquee-sep">✦</span>
+                    <span class="x10-marquee-item">DIGITAL STRATEGY</span>
+                    <span class="x10-marquee-sep">✦</span>
+                    <span class="x10-marquee-item">GROWTH SYSTEMS</span>
+                    <span class="x10-marquee-sep">✦</span>
+                    <span class="x10-marquee-item">AI AUTOMATION</span>
+                    <span class="x10-marquee-sep">✦</span>
+                    <span class="x10-marquee-item">BRAND POSITIONING</span>
+                    <span class="x10-marquee-sep">✦</span>
+                    <span class="x10-marquee-item">LEAD GENERATION</span>
+                    <span class="x10-marquee-sep">✦</span>
+
+                    <!-- duplicate for seamless loop -->
+                    <span class="x10-marquee-item">SEO</span>
+                    <span class="x10-marquee-sep">✦</span>
+                    <span class="x10-marquee-item">WEB DESIGN</span>
+                    <span class="x10-marquee-sep">✦</span>
+                    <span class="x10-marquee-item">DIGITAL STRATEGY</span>
+                    <span class="x10-marquee-sep">✦</span>
+                    <span class="x10-marquee-item">GROWTH SYSTEMS</span>
+                    <span class="x10-marquee-sep">✦</span>
+                    <span class="x10-marquee-item">AI AUTOMATION</span>
+                    <span class="x10-marquee-sep">✦</span>
+                    <span class="x10-marquee-item">BRAND POSITIONING</span>
+                    <span class="x10-marquee-sep">✦</span>
+                    <span class="x10-marquee-item">LEAD GENERATION</span>
+                    <span class="x10-marquee-sep">✦</span>
+
+                </div>
+            </div>
+
+            <!-- Strip 2 — Green / Black text (tilts other way) -->
+            <div class="x10-marquee-strip x10-marquee-strip--green">
+                <div class="x10-marquee-track x10-marquee-track--right">
+
+                    <span class="x10-marquee-item">MEASURABLE RESULTS</span>
+                    <span class="x10-marquee-sep">●</span>
+                    <span class="x10-marquee-item">DATA-DRIVEN</span>
+                    <span class="x10-marquee-sep">●</span>
+                    <span class="x10-marquee-item">PERFORMANCE FIRST</span>
+                    <span class="x10-marquee-sep">●</span>
+                    <span class="x10-marquee-item">SCALE WITHOUT LIMITS</span>
+                    <span class="x10-marquee-sep">●</span>
+                    <span class="x10-marquee-item">BUILT TO CONVERT</span>
+                    <span class="x10-marquee-sep">●</span>
+                    <span class="x10-marquee-item">STRATEGY MEETS EXECUTION</span>
+                    <span class="x10-marquee-sep">●</span>
+
+                    <!-- duplicate for seamless loop -->
+                    <span class="x10-marquee-item">MEASURABLE RESULTS</span>
+                    <span class="x10-marquee-sep">●</span>
+                    <span class="x10-marquee-item">DATA-DRIVEN</span>
+                    <span class="x10-marquee-sep">●</span>
+                    <span class="x10-marquee-item">PERFORMANCE FIRST</span>
+                    <span class="x10-marquee-sep">●</span>
+                    <span class="x10-marquee-item">SCALE WITHOUT LIMITS</span>
+                    <span class="x10-marquee-sep">●</span>
+                    <span class="x10-marquee-item">BUILT TO CONVERT</span>
+                    <span class="x10-marquee-sep">●</span>
+                    <span class="x10-marquee-item">STRATEGY MEETS EXECUTION</span>
+                    <span class="x10-marquee-sep">●</span>
+
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <style>
+        /* ===== 10X DUAL MARQUEE SECTION ===== */
+        
+        .x10-marquee-section {
+            --x10-green: #08f703;
+            --x10-black: #000000;
+            position: relative;
+            width: 100%;
+            padding: 0;
+            /* no section padding */
+            background: #ffffff;
+            overflow: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .x10-marquee-section *,
+        .x10-marquee-section *::before,
+        .x10-marquee-section *::after {
+            box-sizing: border-box;
+        }
+        /* ---------- Stage ---------- */
+        
+        .x10-marquee-stage {
+            position: relative;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+            padding: 90px 0;
+            /* space so rotated strips aren't clipped */
+        }
+        /* ---------- Strip ---------- */
+        
+        .x10-marquee-strip {
+            position: relative;
+            width: 110vw;
+            margin-left: -5vw;
+            overflow: hidden;
+            padding: 22px 0;
+            will-change: transform;
+        }
+        
+        .x10-marquee-strip--dark {
+            background: var(--x10-black);
+            color: #ffffff;
+            transform: rotate(-2.5deg);
+            z-index: 1;
+        }
+        
+        .x10-marquee-strip--green {
+            background: var(--x10-green);
+            color: #050505;
+            transform: rotate(2.5deg);
+            z-index: 2;
+        }
+        /* ---------- Track ---------- */
+        
+        .x10-marquee-track {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            width: max-content;
+            will-change: transform;
+        }
+        
+        .x10-marquee-track--left {
+            animation: x10MarqueeLeft 28s linear infinite;
+        }
+        
+        .x10-marquee-track--right {
+            animation: x10MarqueeRight 28s linear infinite;
+        }
+        /* ---------- Item ---------- */
+        
+        .x10-marquee-item {
+            font-size: 22px;
+            font-weight: 800;
+            letter-spacing: 2.4px;
+            text-transform: uppercase;
+            white-space: nowrap;
+            line-height: 1;
+        }
+        
+        .x10-marquee-sep {
+            font-size: 14px;
+            opacity: .7;
+            line-height: 1;
+            flex-shrink: 0;
+        }
+        
+        .x10-marquee-strip--green .x10-marquee-sep {
+            opacity: .55;
+        }
+        /* ---------- Animations ---------- */
+        
+        @keyframes x10MarqueeLeft {
+            from {
+                transform: translateX(0);
+            }
+            to {
+                transform: translateX(-50%);
+            }
+        }
+        
+        @keyframes x10MarqueeRight {
+            from {
+                transform: translateX(-50%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        /* NOTE: no hover pause — the marquee loops continuously */
+        /* ---------- Tablet ---------- */
+        
+        @media (max-width: 900px) {
+            .x10-marquee-stage {
+                gap: 24px;
+                padding: 70px 0;
+            }
+            .x10-marquee-strip {
+                padding: 18px 0;
+            }
+            .x10-marquee-track {
+                gap: 32px;
+            }
+            .x10-marquee-item {
+                font-size: 18px;
+                letter-spacing: 2px;
+            }
+            .x10-marquee-sep {
+                font-size: 12px;
+            }
+        }
+        /* ---------- Mobile ---------- */
+        
+        @media (max-width: 600px) {
+            .x10-marquee-stage {
+                gap: 18px;
+                padding: 50px 0;
+            }
+            .x10-marquee-strip {
+                padding: 14px 0;
+                transform: rotate(-2deg);
+            }
+            .x10-marquee-strip--green {
+                transform: rotate(2deg);
+            }
+            .x10-marquee-track {
+                gap: 24px;
+            }
+            .x10-marquee-item {
+                font-size: 14px;
+                letter-spacing: 1.6px;
+            }
+            .x10-marquee-sep {
+                font-size: 10px;
+            }
+        }
+        /* ---------- Reduced motion ---------- */
+        
+        @media (prefers-reduced-motion: reduce) {
+            .x10-marquee-track {
+                animation: none;
+            }
+        }
+    </style>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="x10-footer" id="footer">
+        <div class="x10-footer-inner">
+
+            <!-- Top: CTA strip -->
+            <div class="x10-footer-cta">
+                <div class="x10-footer-cta-text">
+                    <span class="x10-footer-cta-eyebrow">READY TO SCALE?</span>
+                    <h3>Let's build your growth system.</h3>
+                </div>
+                <a href="#contact" class="x10-footer-cta-btn">
+                Book a Strategy Call
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+            </div>
+
+            <!-- Main grid -->
+            <div class="x10-footer-grid">
+
+                <!-- CENTER on mobile / MIDDLE on desktop: Brand -->
+                <div class="x10-footer-col x10-footer-col--brand">
+                    <a href="#hero" class="x10-footer-logo" aria-label="10X Digital Ventures">
+                        <img src="images/logo-white.webp" alt="10X Digital Ventures">
+                    </a>
+
+                    <p class="x10-footer-desc">
+                        We build digital systems that drive predictable growth — strategy, execution, and measurable results under one roof.
+                    </p>
+
+                    <div class="x10-footer-socials">
+                        <a href="#" aria-label="Instagram" class="x10-footer-social">
+                            <i class="fa-brands fa-instagram"></i>
+                        </a>
+                        <a href="#" aria-label="LinkedIn" class="x10-footer-social">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" aria-label="X" class="x10-footer-social">
+                            <i class="fa-brands fa-x-twitter"></i>
+                        </a>
+                        <a href="#" aria-label="YouTube" class="x10-footer-social">
+                            <i class="fa-brands fa-youtube"></i>
+                        </a>
+                        <a href="#" aria-label="Facebook" class="x10-footer-social">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- LEFT on desktop: Quick Links -->
+                <div class="x10-footer-col x10-footer-col--links">
+                    <h4 class="x10-footer-title">
+                        <span class="x10-footer-title-line"></span> Quick Links
+                    </h4>
+                    <ul class="x10-footer-links">
+                        <li><a href="#hero"><span>Home</span><i class="fa-solid fa-arrow-right"></i></a></li>
+                        <li><a href="#about"><span>About</span><i class="fa-solid fa-arrow-right"></i></a></li>
+                        <li><a href="#systems"><span>Systems</span><i class="fa-solid fa-arrow-right"></i></a></li>
+                        <li><a href="#work"><span>Our Work</span><i class="fa-solid fa-arrow-right"></i></a></li>
+                        <li><a href="#testimonials"><span>Testimonials</span><i class="fa-solid fa-arrow-right"></i></a></li>
+                        <li><a href="#contact"><span>Contact</span><i class="fa-solid fa-arrow-right"></i></a></li>
+                    </ul>
+                </div>
+
+                <!-- RIGHT on desktop: Contact -->
+                <div class="x10-footer-col x10-footer-col--contact">
+                    <h4 class="x10-footer-title">
+                        <span class="x10-footer-title-line"></span> Get in Touch
+                    </h4>
+
+                    <ul class="x10-footer-contact">
+                        <li>
+                            <span class="x10-footer-icon"><i class="fa-solid fa-envelope"></i></span>
+                            <div>
+                                <span class="x10-footer-label">Email</span>
+                                <a href="mailto:hello@10xdigitalventures.com">hello@10xdigitalventures.com</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="x10-footer-icon"><i class="fa-solid fa-phone"></i></span>
+                            <div>
+                                <span class="x10-footer-label">Phone</span>
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </div>
+                        </li>
+                        <li>
+                            <span class="x10-footer-icon"><i class="fa-solid fa-location-dot"></i></span>
+                            <div>
+                                <span class="x10-footer-label">Office</span>
+                                <span>123 Growth Street, Digital City</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <!-- Bottom bar -->
+            <div class="x10-footer-bottom">
+                <p>© <span id="x10FooterYear">2025</span> 10X Digital Ventures. All rights reserved.</p>
+                <div class="x10-footer-legal">
+                    <a href="#">Privacy</a>
+                    <span class="x10-footer-dot">·</span>
+                    <a href="#">Terms</a>
+                    <span class="x10-footer-dot">·</span>
+                    <a href="#">Cookies</a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Giant background wordmark -->
+        <div class="x10-footer-watermark" aria-hidden="true">10X</div>
+    </footer>
+
+    <script>
+        (function() {
+            var y = document.getElementById("x10FooterYear");
+            if (y) y.textContent = new Date().getFullYear();
+        })();
+    </script>
+
+
+
 </body>
+
 </html>
